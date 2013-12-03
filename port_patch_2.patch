@@ -1,0 +1,7 @@
+diff --git a/jni/citisolo-libnfc-andro b/jni/citisolo-libnfc-andro
+index a2a10dc..a1ef329 160000
+--- a/jni/citisolo-libnfc-andro
++++ b/jni/citisolo-libnfc-andro
+@@ -1 +1 @@
+-Subproject commit a2a10dc4a7b1bdb721089006898fd0ee27ab35fb
++Subproject commit a1ef3299621dccac15e1b27a258205d02579a197
