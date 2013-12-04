@@ -23,7 +23,7 @@
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/string.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/malloc.h \
@@ -78,7 +78,7 @@
 
 /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h:
 

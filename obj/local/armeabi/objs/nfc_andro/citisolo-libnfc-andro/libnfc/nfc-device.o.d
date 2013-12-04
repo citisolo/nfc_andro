@@ -21,7 +21,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/time.h \
@@ -73,7 +73,7 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
 
 /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc-internal.h:
 

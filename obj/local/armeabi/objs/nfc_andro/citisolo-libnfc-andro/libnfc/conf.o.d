@@ -1,6 +1,6 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc_andro/citisolo-libnfc-andro/libnfc/conf.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/conf.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/conf.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/include/nfc/nfc-types.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h \
@@ -20,7 +20,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-andro/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
 
 /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/conf.h:
 
