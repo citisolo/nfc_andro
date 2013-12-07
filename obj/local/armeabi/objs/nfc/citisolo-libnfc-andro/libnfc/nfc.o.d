@@ -1,4 +1,4 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc_andro/citisolo-libnfc-andro/libnfc/nfc.o: \
+/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/citisolo-libnfc-andro/libnfc/nfc.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc.c \
  /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h \

@@ -21,9 +21,11 @@ LOCAL_SRC_FILES:= \
  citisolo-libnfc-andro/libnfc/nfc.c \
  citisolo-libnfc-andro/libnfc/target-subr.c \
  citisolo-libnfc-andro/utils/nfc-utils.c \
+ citisolo-libnfc-andro/libnfc/buses/usbbus.c \
  citisolo-libnfc-andro/libnfc/chips/pn53x.c\
  citisolo-libnfc-andro/libnfc/drivers/acr122_usb.c \
- nfc-poll.c \
+ pn53x-diagnose.c \
+ 
  #citisolo-libnfc-andro/buses/empty.c \#
  #citisolo-libnfc-andro/buses/i2c.c \#
  
@@ -42,8 +44,8 @@ $(LOCAL_PATH)/citisolo-libnfc-andro/utils
 
 
 
-LOCAL_CFLAGS += -DLIBUSB_DESCRIBE=""  -O3 -DHAVE_CONFIG_H -std=c99 -DLIBUSB_ENABLED #-DDRIVER_ACR122_USB_ENABLED#
-LOCAL_MODULE:= libnfc_andro
+LOCAL_CFLAGS += -DLIBUSB_DESCRIBE=""  -O3 -DHAVE_CONFIG_H -std=c99 -DHAVE_LIBUSB -DDRIVER_ACR122_USB_ENABLED
+LOCAL_MODULE:= libnfc
 LOCAL_PRELINK_MODULE:= true
 include $(BUILD_EXECUTABLE)
 
