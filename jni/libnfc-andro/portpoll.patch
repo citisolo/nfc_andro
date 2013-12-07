@@ -1,0 +1,45 @@
+From a2a10dc4a7b1bdb721089006898fd0ee27ab35fb Mon Sep 17 00:00:00 2001
+From: kwadwo amankwa <citisolo@gmail.com>
+Date: Tue, 3 Dec 2013 15:57:27 +0000
+Subject: [PATCH] configured for android arm
+
+---
+ examples/doc/.deps/quick_start_example1.Po |    1 +
+ examples/doc/.deps/quick_start_example2.Po |    1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 examples/doc/.deps/quick_start_example1.Po
+ create mode 100644 examples/doc/.deps/quick_start_example2.Po
+ mode change 100755 => 100644 examples/pn53x-tamashell-scripts/ReadMobib.sh
+ mode change 100755 => 100644 examples/pn53x-tamashell-scripts/ReadNavigo.sh
+ mode change 100755 => 100644 make_release.sh
+ mode change 100755 => 100644 test/run-test.sh
+
+diff --git a/examples/doc/.deps/quick_start_example1.Po b/examples/doc/.deps/quick_start_example1.Po
+new file mode 100644
+index 0000000..9ce06a8
+--- /dev/null
++++ b/examples/doc/.deps/quick_start_example1.Po
+@@ -0,0 +1 @@
++# dummy
+diff --git a/examples/doc/.deps/quick_start_example2.Po b/examples/doc/.deps/quick_start_example2.Po
+new file mode 100644
+index 0000000..9ce06a8
+--- /dev/null
++++ b/examples/doc/.deps/quick_start_example2.Po
+@@ -0,0 +1 @@
++# dummy
+diff --git a/examples/pn53x-tamashell-scripts/ReadMobib.sh b/examples/pn53x-tamashell-scripts/ReadMobib.sh
+old mode 100755
+new mode 100644
+diff --git a/examples/pn53x-tamashell-scripts/ReadNavigo.sh b/examples/pn53x-tamashell-scripts/ReadNavigo.sh
+old mode 100755
+new mode 100644
+diff --git a/make_release.sh b/make_release.sh
+old mode 100755
+new mode 100644
+diff --git a/test/run-test.sh b/test/run-test.sh
+old mode 100755
+new mode 100644
+-- 
+1.7.9.5
+
