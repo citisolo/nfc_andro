@@ -10,20 +10,20 @@ LOCAL_SRC_FILES:= \
  libusb-0.1.12/error.c \
  libusb-0.1.12/linux.c \
  libusb-0.1.12/usb.c \
- citisolo-libnfc-andro/libnfc/conf.c \
- citisolo-libnfc-andro/libnfc/iso14443-subr.c \
- citisolo-libnfc-andro/libnfc/log-internal.c \
- citisolo-libnfc-andro/libnfc/log.c \
- citisolo-libnfc-andro/libnfc/mirror-subr.c \
- citisolo-libnfc-andro/libnfc/nfc-device.c \
- citisolo-libnfc-andro/libnfc/nfc-emulation.c \
- citisolo-libnfc-andro/libnfc/nfc-internal.c \
- citisolo-libnfc-andro/libnfc/nfc.c \
- citisolo-libnfc-andro/libnfc/target-subr.c \
- citisolo-libnfc-andro/utils/nfc-utils.c \
- citisolo-libnfc-andro/libnfc/buses/usbbus.c \
- citisolo-libnfc-andro/libnfc/chips/pn53x.c\
- citisolo-libnfc-andro/libnfc/drivers/acr122_usb.c \
+ libnfc-andro/libnfc/conf.c \
+ libnfc-andro/libnfc/iso14443-subr.c \
+ libnfc-andro/libnfc/log-internal.c \
+ libnfc-andro/libnfc/log.c \
+ libnfc-andro/libnfc/mirror-subr.c \
+ libnfc-andro/libnfc/nfc-device.c \
+ libnfc-andro/libnfc/nfc-emulation.c \
+ libnfc-andro/libnfc/nfc-internal.c \
+ libnfc-andro/libnfc/nfc.c \
+ libnfc-andro/libnfc/target-subr.c \
+ libnfc-andro/utils/nfc-utils.c \
+ libnfc-andro/libnfc/buses/usbbus.c \
+ libnfc-andro/libnfc/chips/pn53x.c\
+ libnfc-andro/libnfc/drivers/acr122_usb.c \
  pn53x-diagnose.c \
  
  #citisolo-libnfc-andro/buses/empty.c \#
@@ -32,14 +32,14 @@ LOCAL_SRC_FILES:= \
 
 LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)/libusb-0.1.12 \
-$(LOCAL_PATH)/citisolo-libnfc-andro \
-$(LOCAL_PATH)/citisolo-libnfc-andro/include \
-$(LOCAL_PATH)/citisolo-libnfc-andro/include/nfc \
-$(LOCAL_PATH)/citisolo-libnfc-andro/libnfc \
-$(LOCAL_PATH)/citisolo-libnfc-andro/libnfc/buses \
-$(LOCAL_PATH)/citisolo-libnfc-andro/libnfc/chips \
-$(LOCAL_PATH)/citisolo-libnfc-andro/libnfc/drivers \
-$(LOCAL_PATH)/citisolo-libnfc-andro/utils
+$(LOCAL_PATH)/libnfc-andro \
+$(LOCAL_PATH)/libnfc-andro/include \
+$(LOCAL_PATH)/libnfc-andro/include/nfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc/buses \
+$(LOCAL_PATH)/libnfc-andro/libnfc/chips \
+$(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
+$(LOCAL_PATH)/libnfc-andro/utils
 
 
 
