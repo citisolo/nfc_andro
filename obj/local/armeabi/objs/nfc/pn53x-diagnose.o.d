@@ -53,7 +53,8 @@
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/chips/pn53x-internal.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h \
  /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc-internal.h \
- /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h
+ /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/utils/debug_trace.h
 
 /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
 
@@ -162,3 +163,5 @@
 /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/nfc-internal.h:
 
 /home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/libnfc/log.h:
+
+/home/redbandit/workspace/ndkLibNFC/jni/citisolo-libnfc-andro/utils/debug_trace.h:
