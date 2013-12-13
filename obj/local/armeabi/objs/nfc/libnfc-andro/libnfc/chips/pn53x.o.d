@@ -1,6 +1,6 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/chips/pn53x.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/_types.h \
@@ -37,7 +37,7 @@
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/mirror-subr.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h:
 

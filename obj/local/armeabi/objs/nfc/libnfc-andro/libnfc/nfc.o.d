@@ -1,6 +1,6 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -57,7 +57,7 @@
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/debug_trace.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h:
 

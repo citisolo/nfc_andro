@@ -1,6 +1,6 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/iso14443-subr.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/iso14443-subr.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -27,7 +27,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h:
 
