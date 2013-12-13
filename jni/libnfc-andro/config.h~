@@ -197,6 +197,7 @@
    such a type exists and the standard includes do not define it. */
 /* #undef uint8_t */
 
+#define DRIVER_ACR122_USB_ENABLED
 
 #define SYSCONFDIR "/nfc"
 

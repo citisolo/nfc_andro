@@ -1,7 +1,7 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/log.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.c \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
@@ -52,11 +52,12 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysconf.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/capability.h \
- /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pathconf.h
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pathconf.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log-internal.h
 
 /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
 
 /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h:
 
@@ -159,3 +160,5 @@
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/capability.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pathconf.h:
+
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log-internal.h:

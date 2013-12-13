@@ -3,15 +3,30 @@ APP_PLATFORM:= android-18
 APP_ABI:= armeabi armeabi-v7a x86
 
 #build libusb
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> adjustBuild
 include $(CLEAR_VARS)
-
 LOCAL_SRC_FILES:= \
  libusb-0.1.12/descriptors.c \
  libusb-0.1.12/error.c \
  libusb-0.1.12/linux.c \
  libusb-0.1.12/usb.c \
+ 
+LOCAL_C_INCLUDES += \
+ $(LOCAL_PATH)/libusb-0.1.12 \
+ 
+ LOCAL_CFLAGS += -DLIBUSB_DESCRIBE=""  -O3 -DHAVE_CONFIG_H -std=c99 
+ LOCAL_MODULE:= libusb
+ 
+include $(BUILD_STATIC_LIBRARY)
+
+#build libnfc
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:= \
  libnfc-andro/libnfc/conf.c \
  libnfc-andro/libnfc/iso14443-subr.c \
  libnfc-andro/libnfc/log-internal.c \
@@ -26,14 +41,37 @@ LOCAL_SRC_FILES:= \
  libnfc-andro/libnfc/buses/usbbus.c \
  libnfc-andro/libnfc/chips/pn53x.c\
  libnfc-andro/libnfc/drivers/acr122_usb.c \
- pn53x-diagnose.c \
+
  
  #citisolo-libnfc-andro/buses/empty.c \#
  #citisolo-libnfc-andro/buses/i2c.c \#
  
 
 LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)/libnfc-andro \
+$(LOCAL_PATH)/libnfc-andro/include \
+$(LOCAL_PATH)/libnfc-andro/include/nfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc/buses \
+$(LOCAL_PATH)/libnfc-andro/libnfc/chips \
+$(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
+$(LOCAL_PATH)/libnfc-andro/utils
+
+LOCAL_EXPORT_C_INCLUDES += \
 $(LOCAL_PATH)/libusb-0.1.12 \
+
+LOCAL_CFLAGS += -DHAVE_CONFIG_H -std=c99 -DHAVE_LIBUSB -DDRIVER_ACR122_USB_ENABLED 
+LOCAL_MODULE:= libnfc
+LOCAL_PRELINK_MODULE:= true
+LOCAL_STATIC_LIBRARIES:= libusb
+include $(BUILD_STATIC_LIBRARY)
+
+#build executable file 
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES:= \
+ pn53x-diagnose.c \
+ 
+LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)/libnfc-andro \
 $(LOCAL_PATH)/libnfc-andro/include \
 $(LOCAL_PATH)/libnfc-andro/include/nfc \
@@ -44,11 +82,12 @@ $(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
 $(LOCAL_PATH)/libnfc-andro/utils
 
 
-
-
-LOCAL_CFLAGS += -DLIBUSB_DESCRIBE=""  -O3 -DHAVE_CONFIG_H -std=c99 -DHAVE_LIBUSB -DDRIVER_ACR122_USB_ENABLED
-LOCAL_MODULE:= libnfc
+LOCAL_CFLAGS += -std=c99 
+LOCAL_MODULE:= nfctest
 LOCAL_PRELINK_MODULE:= true
+LOCAL_STATIC_LIBRARIES:= libnfc \
+libusb
+
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)

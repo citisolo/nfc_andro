@@ -1,6 +1,6 @@
 /home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/drivers/acr122_usb.o: \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers/acr122_usb.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h \
+ /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -52,7 +52,7 @@
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/buses/usbbus.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/usb.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysconf.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/capability.h \
@@ -64,7 +64,7 @@
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x-internal.h \
  /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/config.h:
+/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h:
 
@@ -168,7 +168,7 @@
 
 /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/buses/usbbus.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h:
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/usb.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h:
 
