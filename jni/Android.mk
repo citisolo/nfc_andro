@@ -3,11 +3,6 @@ APP_PLATFORM:= android-18
 APP_ABI:= armeabi armeabi-v7a x86
 
 #build libusb
-<<<<<<< HEAD
-
-
-=======
->>>>>>> adjustBuild
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= \
  libusb-0.1.12/descriptors.c \
