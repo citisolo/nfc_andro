@@ -297,6 +297,8 @@ m4trace:configure.ac:18: -1- m4_pattern_allow([^am__include$])
 m4trace:configure.ac:18: -1- AC_SUBST([am__quote])
 m4trace:configure.ac:18: -1- AC_SUBST_TRACE([am__quote])
 m4trace:configure.ac:18: -1- m4_pattern_allow([^am__quote$])
+m4trace:configure.ac:18: -1- AC_ARG_ENABLE([dependency-tracking], [  --disable-dependency-tracking  speeds up one-time build
+  --enable-dependency-tracking   do not reject slow dependency extractors])
 m4trace:configure.ac:18: -1- AM_CONDITIONAL([AMDEP], [test "x$enable_dependency_tracking" != xno])
 m4trace:configure.ac:18: -1- AC_SUBST([AMDEP_TRUE])
 m4trace:configure.ac:18: -1- AC_SUBST_TRACE([AMDEP_TRUE])
@@ -332,6 +334,8 @@ m4trace:configure.ac:18: -1- AC_SUBST([AR])
 m4trace:configure.ac:18: -1- AC_SUBST_TRACE([AR])
 m4trace:configure.ac:18: -1- m4_pattern_allow([^AR$])
 m4trace:configure.ac:20: -1- AM_SILENT_RULES([yes])
+m4trace:configure.ac:20: -1- AC_ARG_ENABLE([silent-rules], [  --enable-silent-rules          less verbose build output (undo: `make V=1')
+  --disable-silent-rules         verbose build output (undo: `make V=0')])
 m4trace:configure.ac:20: -1- AC_SUBST([AM_V])
 m4trace:configure.ac:20: -1- AC_SUBST_TRACE([AM_V])
 m4trace:configure.ac:20: -1- m4_pattern_allow([^AM_V$])
@@ -398,6 +402,77 @@ m4trace:configure.ac:28: -1- LT_INIT
 m4trace:configure.ac:28: -1- m4_pattern_forbid([^_?LT_[A-Z_]+$])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^(_LT_EOF|LT_DLGLOBAL|LT_DLLAZY_OR_NOW|LT_MULTI_MODULE)$])
 m4trace:configure.ac:28: -1- AC_REQUIRE_AUX_FILE([ltmain.sh])
+m4trace:configure.ac:28: -1- AC_ARG_ENABLE([shared], [AS_HELP_STRING([--enable-shared@<:@=PKGS@:>@],
+	[build shared libraries @<:@default=]_LT_ENABLE_SHARED_DEFAULT[@:>@])], [p=${PACKAGE-default}
+    case $enableval in
+    yes) enable_shared=yes ;;
+    no) enable_shared=no ;;
+    *)
+      enable_shared=no
+      # Look at the argument we got.  We use all the common list separators.
+      lt_save_ifs="$IFS"; IFS="${IFS}$PATH_SEPARATOR,"
+      for pkg in $enableval; do
+	IFS="$lt_save_ifs"
+	if test "X$pkg" = "X$p"; then
+	  enable_shared=yes
+	fi
+      done
+      IFS="$lt_save_ifs"
+      ;;
+    esac], [enable_shared=yes])
+m4trace:configure.ac:28: -1- AC_ARG_ENABLE([static], [AS_HELP_STRING([--enable-static@<:@=PKGS@:>@],
+	[build static libraries @<:@default=]_LT_ENABLE_STATIC_DEFAULT[@:>@])], [p=${PACKAGE-default}
+    case $enableval in
+    yes) enable_static=yes ;;
+    no) enable_static=no ;;
+    *)
+     enable_static=no
+      # Look at the argument we got.  We use all the common list separators.
+      lt_save_ifs="$IFS"; IFS="${IFS}$PATH_SEPARATOR,"
+      for pkg in $enableval; do
+	IFS="$lt_save_ifs"
+	if test "X$pkg" = "X$p"; then
+	  enable_static=yes
+	fi
+      done
+      IFS="$lt_save_ifs"
+      ;;
+    esac], [enable_static=yes])
+m4trace:configure.ac:28: -1- AC_ARG_WITH([pic], [AS_HELP_STRING([--with-pic@<:@=PKGS@:>@],
+	[try to use only PIC/non-PIC objects @<:@default=use both@:>@])], [lt_p=${PACKAGE-default}
+    case $withval in
+    yes|no) pic_mode=$withval ;;
+    *)
+      pic_mode=default
+      # Look at the argument we got.  We use all the common list separators.
+      lt_save_ifs="$IFS"; IFS="${IFS}$PATH_SEPARATOR,"
+      for lt_pkg in $withval; do
+	IFS="$lt_save_ifs"
+	if test "X$lt_pkg" = "X$lt_p"; then
+	  pic_mode=yes
+	fi
+      done
+      IFS="$lt_save_ifs"
+      ;;
+    esac], [pic_mode=default])
+m4trace:configure.ac:28: -1- AC_ARG_ENABLE([fast-install], [AS_HELP_STRING([--enable-fast-install@<:@=PKGS@:>@],
+    [optimize for fast installation @<:@default=]_LT_ENABLE_FAST_INSTALL_DEFAULT[@:>@])], [p=${PACKAGE-default}
+    case $enableval in
+    yes) enable_fast_install=yes ;;
+    no) enable_fast_install=no ;;
+    *)
+      enable_fast_install=no
+      # Look at the argument we got.  We use all the common list separators.
+      lt_save_ifs="$IFS"; IFS="${IFS}$PATH_SEPARATOR,"
+      for pkg in $enableval; do
+	IFS="$lt_save_ifs"
+	if test "X$pkg" = "X$p"; then
+	  enable_fast_install=yes
+	fi
+      done
+      IFS="$lt_save_ifs"
+      ;;
+    esac], [enable_fast_install=yes])
 m4trace:configure.ac:28: -1- AC_SUBST([LIBTOOL])
 m4trace:configure.ac:28: -1- AC_SUBST_TRACE([LIBTOOL])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^LIBTOOL$])
@@ -444,6 +519,8 @@ m4trace:configure.ac:28: -1- m4_pattern_allow([^FGREP$])
 m4trace:configure.ac:28: -1- AC_SUBST([GREP])
 m4trace:configure.ac:28: -1- AC_SUBST_TRACE([GREP])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^GREP$])
+m4trace:configure.ac:28: -1- AC_ARG_WITH([gnu-ld], [AS_HELP_STRING([--with-gnu-ld],
+	[assume the C compiler uses GNU ld @<:@default=no@:>@])], [test "$withval" = no || with_gnu_ld=yes], [with_gnu_ld=no])
 m4trace:configure.ac:28: -1- AC_SUBST([LD])
 m4trace:configure.ac:28: -1- AC_SUBST_TRACE([LD])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^LD$])
@@ -486,6 +563,8 @@ m4trace:configure.ac:28: -1- m4_pattern_allow([^STRIP$])
 m4trace:configure.ac:28: -1- AC_SUBST([RANLIB])
 m4trace:configure.ac:28: -1- AC_SUBST_TRACE([RANLIB])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^RANLIB$])
+m4trace:configure.ac:28: -1- AC_ARG_WITH([sysroot], [  --with-sysroot[=DIR] Search for dependent libraries within DIR
+                        (or the compiler's sysroot if not specified).], [], [with_sysroot=no])
 m4trace:configure.ac:28: -1- m4_pattern_allow([LT_OBJDIR])
 m4trace:configure.ac:28: -1- AC_DEFINE_TRACE_LITERAL([LT_OBJDIR])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^LT_OBJDIR$])
@@ -493,6 +572,8 @@ m4trace:configure.ac:28: -1- AH_OUTPUT([LT_OBJDIR], [/* Define to the sub-direct
    */
 @%:@undef LT_OBJDIR])
 m4trace:configure.ac:28: -1- LT_SUPPORTED_TAG([CC])
+m4trace:configure.ac:28: -1- AC_ARG_ENABLE([libtool-lock], [AS_HELP_STRING([--disable-libtool-lock],
+    [avoid locking (might break parallel builds)])])
 m4trace:configure.ac:28: -1- AC_SUBST([MANIFEST_TOOL])
 m4trace:configure.ac:28: -1- AC_SUBST_TRACE([MANIFEST_TOOL])
 m4trace:configure.ac:28: -1- m4_pattern_allow([^MANIFEST_TOOL$])
@@ -699,6 +780,7 @@ m4trace:configure.ac:68: -1- AH_OUTPUT([off_t], [/* Define to `long int\' if <sy
 m4trace:configure.ac:71: -1- AC_SUBST([LIBNFC_CFLAGS])
 m4trace:configure.ac:71: -1- AC_SUBST_TRACE([LIBNFC_CFLAGS])
 m4trace:configure.ac:71: -1- m4_pattern_allow([^LIBNFC_CFLAGS$])
+m4trace:configure.ac:74: -1- AC_ARG_ENABLE([log], [  --disable-log           Disable any logs], [enable_log=$enableval], [enable_log="yes"])
 m4trace:configure.ac:77: -1- AM_CONDITIONAL([WITH_LOG], [test "$enable_log" != "no"])
 m4trace:configure.ac:77: -1- AC_SUBST([WITH_LOG_TRUE])
 m4trace:configure.ac:77: -1- AC_SUBST_TRACE([WITH_LOG_TRUE])
@@ -712,6 +794,7 @@ m4trace:configure.ac:81: -1- AC_DEFINE_TRACE_LITERAL([LOG])
 m4trace:configure.ac:81: -1- m4_pattern_allow([^LOG$])
 m4trace:configure.ac:81: -1- AH_OUTPUT([LOG], [/* Enable log */
 @%:@undef LOG])
+m4trace:configure.ac:85: -1- AC_ARG_ENABLE([conffiles], [  --disable-conffiles     Disable use of config files], [enable_conffiles=$enableval], [enable_conffiles="yes"])
 m4trace:configure.ac:88: -1- AM_CONDITIONAL([WITH_CONFFILES], [test "$enable_conffiles" != "no"])
 m4trace:configure.ac:88: -1- AC_SUBST([WITH_CONFFILES_TRUE])
 m4trace:configure.ac:88: -1- AC_SUBST_TRACE([WITH_CONFFILES_TRUE])
@@ -725,6 +808,7 @@ m4trace:configure.ac:92: -1- AC_DEFINE_TRACE_LITERAL([CONFFILES])
 m4trace:configure.ac:92: -1- m4_pattern_allow([^CONFFILES$])
 m4trace:configure.ac:92: -1- AH_OUTPUT([CONFFILES], [/* Enable conffiles */
 @%:@undef CONFFILES])
+m4trace:configure.ac:96: -1- AC_ARG_ENABLE([envvars], [  --disable-envvars       Disable use of environment variables], [enable_envvars=$enableval], [enable_envvars="yes"])
 m4trace:configure.ac:99: -1- AM_CONDITIONAL([WITH_ENVVARS], [test "$enable_envvars" != "no"])
 m4trace:configure.ac:99: -1- AC_SUBST([WITH_ENVVARS_TRUE])
 m4trace:configure.ac:99: -1- AC_SUBST_TRACE([WITH_ENVVARS_TRUE])
@@ -738,6 +822,7 @@ m4trace:configure.ac:103: -1- AC_DEFINE_TRACE_LITERAL([ENVVARS])
 m4trace:configure.ac:103: -1- m4_pattern_allow([^ENVVARS$])
 m4trace:configure.ac:103: -1- AH_OUTPUT([ENVVARS], [/* Enable envvars */
 @%:@undef ENVVARS])
+m4trace:configure.ac:107: -1- AC_ARG_ENABLE([debug], [  --enable-debug          Enable debug mode], [enable_debug=$enableval], [enable_debug="no"])
 m4trace:configure.ac:110: -1- AM_CONDITIONAL([WITH_DEBUG], [test "$enable_debug" != "no"])
 m4trace:configure.ac:110: -1- AC_SUBST([WITH_DEBUG_TRUE])
 m4trace:configure.ac:110: -1- AC_SUBST_TRACE([WITH_DEBUG_TRUE])
@@ -751,6 +836,29 @@ m4trace:configure.ac:114: -1- AC_DEFINE_TRACE_LITERAL([DEBUG])
 m4trace:configure.ac:114: -1- m4_pattern_allow([^DEBUG$])
 m4trace:configure.ac:114: -1- AH_OUTPUT([DEBUG], [/* Enable debug flag */
 @%:@undef DEBUG])
+m4trace:configure.ac:119: -1- AC_ARG_WITH([drivers], [  --with-drivers=DRIVERS  Use a custom driver set, where DRIVERS is a
+                          coma-separated list of drivers to build support for.
+                          Available drivers are: 'acr122_pcsc', 'acr122_usb',
+                          'acr122s', 'arygon', 'pn532_i2c', 'pn532_spi',
+                          'pn532_uart' and 'pn53x_usb'. Default drivers set is
+                          'acr122_usb,acr122s,arygon,pn532_i2c,pn532_spi,pn532_uart,pn53x_usb'.
+                          The special driver set 'all' compile all available
+                          drivers.], [       case "${withval}" in
+          yes | no)
+                  dnl ignore calls without any arguments
+                  DRIVER_BUILD_LIST="default"
+                  AC_MSG_RESULT(default drivers)
+                  ;;
+          *)
+                  DRIVER_BUILD_LIST=`echo ${withval} | sed "s/,/ /g"`
+                  AC_MSG_RESULT(${DRIVER_BUILD_LIST})
+                  ;;
+          esac
+  ], [
+          DRIVER_BUILD_LIST="default"
+          AC_MSG_RESULT(default drivers)
+  
+  ])
 m4trace:configure.ac:119: -1- AC_SUBST([DRIVERS_CFLAGS])
 m4trace:configure.ac:119: -1- AC_SUBST_TRACE([DRIVERS_CFLAGS])
 m4trace:configure.ac:119: -1- m4_pattern_allow([^DRIVERS_CFLAGS$])
@@ -853,6 +961,7 @@ m4trace:configure.ac:128: -1- AC_SUBST_TRACE([I2C_ENABLED_FALSE])
 m4trace:configure.ac:128: -1- m4_pattern_allow([^I2C_ENABLED_FALSE$])
 m4trace:configure.ac:128: -1- _AM_SUBST_NOTMAKE([I2C_ENABLED_TRUE])
 m4trace:configure.ac:128: -1- _AM_SUBST_NOTMAKE([I2C_ENABLED_FALSE])
+m4trace:configure.ac:131: -1- AC_ARG_ENABLE([doc], [  --enable-doc            Enable documentation generation.], [enable_doc=$enableval], [enable_doc="no"])
 m4trace:configure.ac:138: -1- AC_SUBST([DOXYGEN])
 m4trace:configure.ac:138: -1- AC_SUBST_TRACE([DOXYGEN])
 m4trace:configure.ac:138: -1- m4_pattern_allow([^DOXYGEN$])
@@ -865,6 +974,7 @@ m4trace:configure.ac:144: -1- AC_SUBST_TRACE([DOC_ENABLED_FALSE])
 m4trace:configure.ac:144: -1- m4_pattern_allow([^DOC_ENABLED_FALSE$])
 m4trace:configure.ac:144: -1- _AM_SUBST_NOTMAKE([DOC_ENABLED_TRUE])
 m4trace:configure.ac:144: -1- _AM_SUBST_NOTMAKE([DOC_ENABLED_FALSE])
+m4trace:configure.ac:149: -1- AC_ARG_WITH([libusb-win32], [AS_HELP_STRING([--with-libusb-win32], [use libusb-win32 from the following location])], [LIBUSB_WIN32_DIR=$withval], [LIBUSB_WIN32_DIR=""])
 m4trace:configure.ac:149: -1- AC_SUBST([libusb_CFLAGS])
 m4trace:configure.ac:149: -1- AC_SUBST_TRACE([libusb_CFLAGS])
 m4trace:configure.ac:149: -1- m4_pattern_allow([^libusb_CFLAGS$])
@@ -938,6 +1048,11 @@ m4trace:configure.ac:164: -1- m4_pattern_allow([^READLINE_LIBS$])
 m4trace:configure.ac:164: -1- AC_SUBST([READLINE_INCLUDES])
 m4trace:configure.ac:164: -1- AC_SUBST_TRACE([READLINE_INCLUDES])
 m4trace:configure.ac:164: -1- m4_pattern_allow([^READLINE_INCLUDES$])
+m4trace:configure.ac:164: -1- AC_ARG_WITH([readline], [[  --with-readline[=dir]   Compile with readline/locate base dir]], [if test "x$withval" = "xno" ; then
+      without_readline=yes
+    elif test "x$withval" != "xyes" ; then
+      with_arg="$withval/include:-L$withval/lib $withval/include/readline:-L$withval/lib"
+    fi])
 m4trace:configure.ac:164: -1- AC_DEFINE_TRACE_LITERAL([HAVE_READLINE])
 m4trace:configure.ac:164: -1- m4_pattern_allow([^HAVE_READLINE$])
 m4trace:configure.ac:164: -1- AH_OUTPUT([HAVE_READLINE], [/* define if you have readline */
