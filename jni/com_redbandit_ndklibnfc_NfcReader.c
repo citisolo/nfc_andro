@@ -37,4 +37,20 @@ Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1exit
 	nfc_context* context = (unsigned long)ctx;
 	nfc_exit(context);
 
+
+}
+
+
+
+JNIEXPORT jcharArray JNICALL
+Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1version
+  (JNIEnv * pEnv, jobject jclazz)
+{
+	const char *acLibnfcVersion;
+    acLibnfcVersion = nfc_version();
+
+    return (*pEnv)->NewStringUTF(pEnv, acLibnfcVersion);
+    //return (jcharArray)acLibnfcVersion;
+
+
 }

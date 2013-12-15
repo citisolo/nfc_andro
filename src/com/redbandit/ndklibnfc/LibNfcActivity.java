@@ -14,6 +14,7 @@ public class LibNfcActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.activity_lib_nfc);
 		TextView tv = new TextView(this);
+		String out = new String() ;
 		tv.setTextSize(30);
 		
 		
@@ -21,15 +22,24 @@ public class LibNfcActivity extends Activity {
 		long ctx = nfc_reader.jnfc_init(); // initialize context
 		if (ctx == 0){
 			//print failure message 
-			tv.setText("LibNfcActivity: context is null");
+			out += "LibNfcActivity: context is null\n";
+			
+			
 		}
 		else
 		{
 			//Print success message
-			tv.setText("LibNfcActivity: context = 0x" + ctx );
+			out += "\nLibNfcActivity: context = 0x" + ctx  ;
+		    
+			String version = nfc_reader.jnfc_version();
+		    out += "\nLibNfcActivity: Version is: " + version;    
+			
+			
+			
 			nfc_reader.jnfc_exit(ctx);
 		}
-			
+		
+		tv.setText(out);
 		this.setContentView(tv);
 	}
 

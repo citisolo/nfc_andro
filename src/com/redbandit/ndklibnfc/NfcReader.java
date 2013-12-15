@@ -14,6 +14,6 @@ public class NfcReader {
 	
 	public native long jnfc_init();
 	public native void jnfc_exit(long ctx);
-    
+    public native String jnfc_version();
 
 }
