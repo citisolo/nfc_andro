@@ -37,10 +37,6 @@ LOCAL_SRC_FILES:= \
  libnfc-andro/libnfc/chips/pn53x.c\
  libnfc-andro/libnfc/drivers/acr122_usb.c \
 
- 
- #citisolo-libnfc-andro/buses/empty.c \#
- #citisolo-libnfc-andro/buses/i2c.c \#
- 
 
 LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)/libnfc-andro \
@@ -85,6 +81,7 @@ libusb
 
 include $(BUILD_EXECUTABLE)
 
+#Build Usb permission helper
 include $(CLEAR_VARS)
 LOCAL_MODULE := UsbPermissionHelper
 LOCAL_LDLIBS := -llog
@@ -92,3 +89,23 @@ LOCAL_SRC_FILES := \
 marto_rtl_tcp_andro_tools_UsbPermissionHelper.c
 include $(BUILD_SHARED_LIBRARY)
 
+#Build Nfc Reader Library
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := \
+com_redbandit_ndklibnfc_NfcReader.c
+
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)/libnfc-andro \
+$(LOCAL_PATH)/libnfc-andro/include \
+$(LOCAL_PATH)/libnfc-andro/include/nfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc \
+$(LOCAL_PATH)/libnfc-andro/libnfc/buses \
+$(LOCAL_PATH)/libnfc-andro/libnfc/chips \
+$(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
+$(LOCAL_PATH)/libnfc-andro/utils
+
+
+LOCAL_MODULE := jnfc
+LOCAL_STATIC_LIBRARIES:= libnfc 
+
+include $(BUILD_SHARED_LIBRARY)
