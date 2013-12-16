@@ -34,6 +34,21 @@ public class LibNfcActivity extends Activity {
 			String version = nfc_reader.jnfc_version();
 		    out += "\nLibNfcActivity: Version is: " + version;    
 			
+		    String connstrings[] = new String[100];
+		    int connstrings_len = 1024;
+		    int szFound = nfc_reader.jnfc_list_devices(ctx, connstrings, connstrings_len);
+		    
+		    if(szFound == 0){
+		    	out += "\nLibNfcActivity: No devices found " ;
+		    }else {
+		    	
+		    	//check connstrings
+		    	if(connstrings != null){
+			    	for (int i=0; i < szFound ; i++){
+			    		out += "\n" + connstrings[i];
+			    	}
+		    	}
+		    }
 			
 			
 			nfc_reader.jnfc_exit(ctx);

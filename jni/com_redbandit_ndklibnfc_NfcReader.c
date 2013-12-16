@@ -11,6 +11,7 @@
 
 # define JSUCCESS 1
 # define JFAILURE 0
+#define  MAX_DEVICE_COUNT 16
 
 JNIEXPORT jlong JNICALL
 Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1init
@@ -42,7 +43,7 @@ Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1exit
 
 
 
-JNIEXPORT jcharArray JNICALL
+JNIEXPORT jstring JNICALL
 Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1version
   (JNIEnv * pEnv, jobject jclazz)
 {
@@ -52,5 +53,21 @@ Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1version
     return (*pEnv)->NewStringUTF(pEnv, acLibnfcVersion);
     //return (jcharArray)acLibnfcVersion;
 
+
+}
+
+JNIEXPORT jint JNICALL
+Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1devices
+  (JNIEnv * pEnv, jobject jclazz, jlong ctx, jobjectArray jconnstrings, jint len)
+{
+	 nfc_context* context = (unsigned long)ctx;
+	 nfc_connstring connstrings[MAX_DEVICE_COUNT];
+
+     size_t szFound = nfc_list_devices(context, connstrings, MAX_DEVICE_COUNT);
+
+     //convert the constrings to virtual
+
+
+     return (jint)szFound;
 
 }
