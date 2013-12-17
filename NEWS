@@ -1,0 +1,199 @@
+commit fcd7b38a6801149f4a320842a6b8e89c3c4f43e6
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 17 21:17:33 2013 +0000
+
+    cleaning up
+
+commit aa2d6d35ad3b3f8921f14d11ef3790c2f7f634d9
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 17 21:11:03 2013 +0000
+
+    got the jlogger working
+
+commit 89ca4a4df703fe15135c021eefb618facc88a8a7
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 17 19:18:34 2013 +0000
+
+    logger and callback implemented
+
+commit 9c5aabdb4c2e989b29d7a15de95b761cff1a6a61
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 17 02:46:37 2013 +0000
+
+     completed java to native logger 1st iteration
+
+commit 065e8149a72be5034c856722fa7dfb98c372081d
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 17 02:45:36 2013 +0000
+
+    implementing native to java logger
+
+commit f5fd4e12a0b35d8aabe5a86121d09258c2e38701
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Mon Dec 16 20:37:01 2013 +0000
+
+    added logging support
+
+commit d53663ad0f2640c7320e61d834d2a91cf99a72f9
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Mon Dec 16 20:13:37 2013 +0000
+
+    project changes added jni support
+
+commit 7fd52c864d801d58d1ec67883304b9fd21c94b06
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Mon Dec 16 20:06:23 2013 +0000
+
+    Added nfc_version api
+
+commit ed3fad03b1b08e9727ff47e9ef55853ded081068
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sun Dec 15 19:30:31 2013 +0000
+
+    Implemented nfc_version
+
+commit 726aabe5ebdc72302b6031c26c8c8ce5153729ad
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sun Dec 15 17:22:44 2013 +0000
+
+     Implemented nfc_init and nfc_exit apis (tested working)
+
+commit 5f5a65b385c37be892e4be67d76710dac3219a40
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Fri Dec 13 21:57:11 2013 +0000
+
+    fixed Android.mk and recompiled
+
+commit 36d3e1cabe762e48982dca0bddf237cc09737428
+Merge: 25ded6f 3933f80
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Fri Dec 13 21:53:36 2013 +0000
+
+    adding object files
+
+commit 3933f80e931bc470f8cf142b5805a112f6e06ed1
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Fri Dec 13 21:43:38 2013 +0000
+
+    Broke libusb and libusb into static libraries
+
+commit 25ded6f74f900a0562338e569bbd185996a0ef8c
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Fri Dec 13 19:46:02 2013 +0000
+
+    slight change to make file
+
+commit d74080a815b08bbca90a352a50e9430b482dc897
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sun Dec 8 11:11:56 2013 +0000
+
+    Modified the readme file
+
+commit e02cd22d3f95ce3b32bdbc3dfa77d6cb4dc540d7
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sun Dec 8 10:31:44 2013 +0000
+
+    adding copyleft files
+
+commit e88a3c72d85f2796d600e5a701901404fc94f5c2
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 19:33:37 2013 +0000
+
+    adding lib files after rebuild
+
+commit bb248ca5e1ce41899d4798cf7a72c06ab0b16af6
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 19:31:58 2013 +0000
+
+    modified make file directory path
+
+commit 97e3b6235bd2064539513e8627ade05fa2252f47
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 19:25:19 2013 +0000
+
+    decoupled libnfc submodule
+
+commit a7a962f465b4872527baf27094ed999761f88c86
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 19:04:36 2013 +0000
+
+    cleaning up
+
+commit a748768ed5dddba7d235f8e15d253802fd1b6f70
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 18:56:43 2013 +0000
+
+    committing binaries
+
+commit 9ed575ea5528fef5a9313a16818d8949d213fb62
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 18:51:47 2013 +0000
+
+    added binaries
+
+commit c3305e9556c3fcbe23fbacdf07c179cd7ecb10bd
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Sat Dec 7 18:50:31 2013 +0000
+
+    Fixed Acr driver and is now running on Android
+
+commit ab047ab025a780c0af7752174d36a8c0b8484171
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Wed Dec 4 20:39:18 2013 +0000
+
+    removed unwanted file from directory
+
+commit 7975ba6020deba95d1e6b11636bd3e598f3f8f5a
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Wed Dec 4 20:09:54 2013 +0000
+
+    moved patch files out of directory
+
+commit fd18a5f386507710bd5a0cf6a6e0d0d87d9de637
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Wed Dec 4 20:08:13 2013 +0000
+
+    add obj files for the new libusb
+
+commit 9a648dd5ab4d862609c2d771a59ccf9c6f42c2db
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Wed Dec 4 20:04:24 2013 +0000
+
+    Configured for the acr usb driver and patched libusb to version < 0 which libnfc uses
+
+commit 9fd7234592be3e6013e914eb74240f9d0187ff17
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 3 17:53:57 2013 +0000
+
+    formatted recent patches
+
+commit 4dcf771c51e90a8666c368654a12350ff770dae5
+Merge: 64fe520 6f1eca7
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 3 17:50:06 2013 +0000
+
+    Merge branch 'master' of https://github.com/citisolo/nfc_andro into andro
+
+commit 6f1eca72982b89bba69f974cfc62f8cc59b494cf
+Author: Kwadwo 'Que' Amankwa <citisolo@gmail.com>
+Date:   Tue Dec 3 09:42:21 2013 -0800
+
+    Initial commit
+
+commit 64fe52012a7884b3373f5db4e717e867e381a802
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 3 16:05:48 2013 +0000
+
+    ported libnfc for build
+
+commit 3f459840bd39269a545b641db61a07598663c0d4
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Tue Dec 3 15:39:00 2013 +0000
+
+    first succesful build of libnfc
+
+commit a880b9e2d8a40b13361840faa32eb476794654e4
+Author: kwadwo amankwa <citisolo@gmail.com>
+Date:   Mon Dec 2 18:50:59 2013 +0000
+
+    Initial commit
