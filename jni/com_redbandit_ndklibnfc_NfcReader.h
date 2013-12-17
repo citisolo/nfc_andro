@@ -39,6 +39,16 @@ JNIEXPORT jstring JNICALL Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1version
 JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1devices
   (JNIEnv *, jobject, jlong, jobjectArray, jint);
 
+/*
+ * Class:     com_redbandit_ndklibnfc_NfcReader
+ * Method:    register
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
+  (JNIEnv *, jobject);
+
+void jprint_debug(char * message);
+
 #ifdef __cplusplus
 }
 #endif

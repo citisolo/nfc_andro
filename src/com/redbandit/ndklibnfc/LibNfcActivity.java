@@ -19,6 +19,12 @@ public class LibNfcActivity extends Activity {
 		
 		
 		NfcReader nfc_reader = new NfcReader();
+		int logOK = nfc_reader.register();
+		if (logOK != 0 ){
+			
+		}
+		
+		
 		long ctx = nfc_reader.jnfc_init(); // initialize context
 		if (ctx == 0){
 			//print failure message 
@@ -54,7 +60,7 @@ public class LibNfcActivity extends Activity {
 			
 			nfc_reader.jnfc_exit(ctx);
 		}
-		
+		out += nfc_reader.log;
 		tv.setText(out);
 		this.setContentView(tv);
 	}

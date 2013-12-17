@@ -36,7 +36,6 @@ LOCAL_SRC_FILES:= \
  libnfc-andro/libnfc/buses/usbbus.c \
  libnfc-andro/libnfc/chips/pn53x.c\
  libnfc-andro/libnfc/drivers/acr122_usb.c \
- 
 
 
 LOCAL_C_INCLUDES += \
@@ -74,16 +73,14 @@ $(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
 $(LOCAL_PATH)/libnfc-andro/utils
 
 
-
 LOCAL_CFLAGS += -std=c99 
 LOCAL_MODULE:= nfctest
 LOCAL_LDLIBS := -llog
 LOCAL_PRELINK_MODULE:= true
 LOCAL_STATIC_LIBRARIES:= libnfc \
-libusb
-LOCAL_SHARED_LIBRARIES:= jlog
+libusb \
 
-include $(BUILD_EXECUTABLE)
+#include $(BUILD_EXECUTABLE)
 
 #Build Usb permission helper
 include $(CLEAR_VARS)
@@ -113,22 +110,9 @@ $(LOCAL_PATH)
 
 
 LOCAL_MODULE := jnfc
-LOCAL_STATIC_LIBRARIES:= libnfc 
-LOCAL_SHARED_LIBRARIES:= jlog
+LOCAL_STATIC_LIBRARIES:= libnfc \
+
 LOCAL_LDLIBS := -llog 
 
 include $(BUILD_SHARED_LIBRARY)
 
-#build logger lib
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := \
-com_redbandit_utils_JNILogger.c
-
-LOCAL_C_INCLUDES += \
-$(LOCAL_PATH)
-
-
-
-LOCAL_MODULE := jlog
-LOCAL_LDLIBS := -llog
-include $(BUILD_SHARED_LIBRARY)

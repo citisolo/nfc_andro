@@ -89,7 +89,7 @@
 #include "drivers.h"
 #include "debug_trace.h"
 #include "jlog.h"
-#include "com_redbandit_utils_JNILogger.h"
+#include "com_redbandit_ndklibnfc_NfcReader.h"
 
 #define  DEBUG_LEVEL 9
 

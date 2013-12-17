@@ -10,7 +10,7 @@
 #include "jlog.h"
 
 #define DEBUG_LEVEL 9
-#define NULL 0
+
 
 // cached refs for later callbacks
 JavaVM * g_vm;

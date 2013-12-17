@@ -6,7 +6,7 @@ public class JNILogger {
     
 	
 	static {
-		System.loadLibrary("jni_initializer");
+		System.loadLibrary("jnfc");
 	}
 	
 	
