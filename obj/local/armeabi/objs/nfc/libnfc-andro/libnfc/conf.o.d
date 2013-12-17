@@ -1,8 +1,6 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/conf.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/conf.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/conf.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h \
+obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/conf.o: \
+ jni/libnfc-andro/libnfc/conf.c jni/libnfc-andro/config.h \
+ jni/libnfc-andro/libnfc/conf.h jni/libnfc-andro/include/nfc/nfc-types.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/_types.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/_types.h \
@@ -34,16 +32,16 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/endian.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/endian.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/endian.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h \
+ jni/libnfc-andro/include/nfc/nfc.h \
+ jni/libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h
+ jni/libnfc-andro/libnfc/log.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
+jni/libnfc-andro/config.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/conf.h:
+jni/libnfc-andro/libnfc/conf.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h:
+jni/libnfc-andro/include/nfc/nfc-types.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h:
 
@@ -107,10 +105,10 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/endian.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h:
+jni/libnfc-andro/include/nfc/nfc.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h:
+jni/libnfc-andro/libnfc/nfc-internal.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h:
+jni/libnfc-andro/libnfc/log.h:

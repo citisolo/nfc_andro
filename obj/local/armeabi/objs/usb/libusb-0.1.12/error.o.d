@@ -1,5 +1,5 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/usb/libusb-0.1.12/error.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.c \
+obj/local/armeabi/objs/usb/libusb-0.1.12/error.o: \
+ jni/libusb-0.1.12/error.c \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/errno.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -10,7 +10,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/string.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/malloc.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h \
+ jni/libusb-0.1.12/usb.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/types.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h \
@@ -48,7 +48,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/strings.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h
+ jni/libusb-0.1.12/error.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/errno.h:
 
@@ -70,7 +70,7 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/malloc.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h:
+jni/libusb-0.1.12/usb.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h:
 
@@ -146,4 +146,4 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h:
+jni/libusb-0.1.12/error.h:

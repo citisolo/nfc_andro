@@ -1,6 +1,6 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/UsbPermissionHelper/marto_rtl_tcp_andro_tools_UsbPermissionHelper.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.c \
- /home/redbandit/workspace/ndkLibNFC/jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.h \
+obj/local/armeabi/objs/UsbPermissionHelper/marto_rtl_tcp_andro_tools_UsbPermissionHelper.o: \
+ jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.c \
+ jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
@@ -59,7 +59,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sched.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.h:
+jni/marto_rtl_tcp_andro_tools_UsbPermissionHelper.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h:
 

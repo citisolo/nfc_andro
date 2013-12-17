@@ -8,6 +8,9 @@
 #include "libnfc/chips/pn53x.h"
 #include "utils/debug_trace.h"
 #include "com_redbandit_ndklibnfc_NfcReader.h"
+#include "jlog.h"
+
+#define  DEBUG_LEVEL 9
 
 # define JSUCCESS 1
 # define JFAILURE 0
@@ -63,11 +66,12 @@ Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1devices
 	 nfc_context* context = (unsigned long)ctx;
 	 nfc_connstring connstrings[MAX_DEVICE_COUNT];
 
-     size_t szFound = nfc_list_devices(context, connstrings, MAX_DEVICE_COUNT);
+     jint szFound = (jint)nfc_list_devices(context, connstrings, MAX_DEVICE_COUNT);
+     LOGDE(DEBUG_LEVEL, "returning szFound" );
 
      //convert the constrings to virtual
 
 
-     return (jint)szFound;
+     return szFound;
 
 }

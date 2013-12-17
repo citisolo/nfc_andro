@@ -75,6 +75,7 @@ $(LOCAL_PATH)/libnfc-andro/utils
 
 LOCAL_CFLAGS += -std=c99 
 LOCAL_MODULE:= nfctest
+LOCAL_LDLIBS := -llog
 LOCAL_PRELINK_MODULE:= true
 LOCAL_STATIC_LIBRARIES:= libnfc \
 libusb
@@ -102,10 +103,13 @@ $(LOCAL_PATH)/libnfc-andro/libnfc \
 $(LOCAL_PATH)/libnfc-andro/libnfc/buses \
 $(LOCAL_PATH)/libnfc-andro/libnfc/chips \
 $(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
-$(LOCAL_PATH)/libnfc-andro/utils
+$(LOCAL_PATH)/libnfc-andro/utils \
+$(LOCAL_PATH)
+
 
 
 LOCAL_MODULE := jnfc
 LOCAL_STATIC_LIBRARIES:= libnfc 
+LOCAL_LDLIBS := -llog
 
 include $(BUILD_SHARED_LIBRARY)

@@ -1,5 +1,4 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfctest/pn53x-diagnose.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/pn53x-diagnose.c \
+obj/local/armeabi/objs/nfctest/pn53x-diagnose.o: jni/pn53x-diagnose.c \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -22,7 +21,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h \
+ jni/libusb-0.1.12/usb.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/select.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/time.h \
@@ -44,16 +43,13 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/capability.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pathconf.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h \
+ jni/libnfc-andro/include/nfc/nfc.h \
+ jni/libnfc-andro/include/nfc/nfc-types.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/nfc-utils.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x-internal.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/debug_trace.h
+ jni/libnfc-andro/utils/nfc-utils.h jni/libnfc-andro/libnfc/chips/pn53x.h \
+ jni/libnfc-andro/libnfc/chips/pn53x-internal.h \
+ jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/libnfc/nfc-internal.h \
+ jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/utils/debug_trace.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h:
 
@@ -99,7 +95,7 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h:
+jni/libusb-0.1.12/usb.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h:
 
@@ -143,22 +139,22 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h:
+jni/libnfc-andro/include/nfc/nfc.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h:
+jni/libnfc-andro/include/nfc/nfc-types.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/nfc-utils.h:
+jni/libnfc-andro/utils/nfc-utils.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x.h:
+jni/libnfc-andro/libnfc/chips/pn53x.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/chips/pn53x-internal.h:
+jni/libnfc-andro/libnfc/chips/pn53x-internal.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h:
+jni/libnfc-andro/libnfc/log.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h:
+jni/libnfc-andro/libnfc/nfc-internal.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h:
+jni/libnfc-andro/libnfc/log.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/debug_trace.h:
+jni/libnfc-andro/utils/debug_trace.h:

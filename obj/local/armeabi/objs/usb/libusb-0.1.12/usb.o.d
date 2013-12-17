@@ -1,5 +1,4 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/usb/libusb-0.1.12/usb.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.c \
+obj/local/armeabi/objs/usb/libusb-0.1.12/usb.o: jni/libusb-0.1.12/usb.c \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -27,8 +26,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/errno.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usbi.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h \
+ jni/libusb-0.1.12/usbi.h jni/libusb-0.1.12/usb.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/select.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/time.h \
@@ -50,7 +48,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/capability.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pathconf.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h
+ jni/libusb-0.1.12/error.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
@@ -106,9 +104,9 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usbi.h:
+jni/libusb-0.1.12/usbi.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h:
+jni/libusb-0.1.12/usb.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/unistd.h:
 
@@ -152,4 +150,4 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h:
+jni/libusb-0.1.12/error.h:

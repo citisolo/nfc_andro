@@ -40,13 +40,14 @@ public class LibNfcActivity extends Activity {
 		    
 		    if(szFound == 0){
 		    	out += "\nLibNfcActivity: No devices found " ;
+		    	out += "\nszFound = " + Integer.toString(szFound)  ;
 		    }else {
-		    	
+		    	out += "\nLibNfcActivity:  devices found " ;
 		    	//check connstrings
 		    	if(connstrings != null){
-			    	for (int i=0; i < szFound ; i++){
-			    		out += "\n" + connstrings[i];
-			    	}
+			    	//for (int i=0; i < szFound ; i++){
+			    	//	out += "\n" + connstrings[i];
+			    	//}
 		    	}
 		    }
 			

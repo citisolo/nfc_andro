@@ -83,10 +83,14 @@
 
 #include <nfc/nfc.h>
 
+
 #include "nfc-internal.h"
 #include "target-subr.h"
 #include "drivers.h"
 #include "debug_trace.h"
+#include "jlog.h"
+
+#define  DEBUG_LEVEL 9
 
 #if defined (DRIVER_ACR122_PCSC_ENABLED)
 #  include "drivers/acr122_pcsc.h"
@@ -176,26 +180,32 @@ int
 nfc_register_driver(const struct nfc_driver *ndr)
 {
   TRACE("Registering driver");
+  LOGDE(DEBUG_LEVEL, "Registering driver" );
   if (!ndr){
 	TRACE("Driver is null");
+	LOGDE(DEBUG_LEVEL, "Driver is null returning NFC_EINVARG" );
     return NFC_EINVARG;
   }
   else
 	TRACE("Driver is not null");
+    LOGDE(DEBUG_LEVEL, "Driver is not null" );
 
   struct nfc_driver_list *pndl = (struct nfc_driver_list *)malloc(sizeof(struct nfc_driver_list));
   if (!pndl){
 	  TRACE("pndl is null");
+	  LOGDE(DEBUG_LEVEL, "pndl is null returning NFC_ESOFT" );
     return NFC_ESOFT;
   }
   else
 	  TRACE("pndl is not null");
+      LOGDE(DEBUG_LEVEL, "pndl is not null" );
 
   pndl->driver = ndr;
   pndl->next = nfc_drivers;
   nfc_drivers = pndl;
 
   TRACE("Returning NFC_SUCCESS");
+  LOGDE(DEBUG_LEVEL, "Returning NFC_SUCCESSl" );
   return NFC_SUCCESS;
 }
 
@@ -336,19 +346,29 @@ size_t
 nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_t connstrings_len)
 {
  TRACE();
+ LOGDE(DEBUG_LEVEL, "starting nfc_list_devices" );
   size_t device_found = 0;
 
 #ifdef CONFFILES
   TRACE("CONNFILES defined");
+  LOGDE(DEBUG_LEVEL, "CONNFILES defined" );
   // Load manually configured devices (from config file and env variables)
   // TODO From env var...
+  //char buffer[100];
+  //sprintf(buffer, "%d",context->user_defined_device_count );
+
+  LOGDE(DEBUG_LEVEL, "user_defined_count is ..." );
+  LOGDE(DEBUG_LEVEL, "%d", context->user_defined_device_count);
+
   for (uint32_t i = 0; i < context->user_defined_device_count; i++) {
+	  LOGDE(DEBUG_LEVEL, "iterate through user defined device" );
     if (context->user_defined_devices[i].optional) {
       // let's make sure the device exists
       nfc_device *pnd = NULL;
 
 #ifdef ENVVARS
    TRACE("ENNVARS defined");
+   LOGDE(DEBUG_LEVEL, "ENNVARS defined" );
       char *env_log_level = getenv("LIBNFC_LOG_LEVEL");
       char *old_env_log_level = NULL;
       // do it silently
@@ -364,6 +384,12 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 #endif // ENVVARS
 
       pnd = nfc_open(context, context->user_defined_devices[i].connstring);
+      LOGDE(DEBUG_LEVEL, "pnd pointer is " );
+      LOGDE(DEBUG_LEVEL, "ox%d", (int)pnd );
+
+      if(pnd == NULL ){
+    	  LOGDE(DEBUG_LEVEL, "pnd is null bozo!" );
+      }
 
 #ifdef ENVVARS
       if (old_env_log_level) {
@@ -374,9 +400,11 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
       }
 #endif // ENVVARS
       TRACE("Checking if device found");
+      LOGDE(DEBUG_LEVEL, "Checking device found" );
       if (pnd) {
         nfc_close(pnd);
         log_put(LOG_GROUP, LOG_CATEGORY, NFC_LOG_PRIORITY_DEBUG, "User device %s found", context->user_defined_devices[i].name);
+        LOGDE(DEBUG_LEVEL,"User device found" );
         strcpy((char *)(connstrings + device_found), context->user_defined_devices[i].connstring);
         device_found ++;
         if (device_found == connstrings_len)
@@ -395,17 +423,23 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
   // Device auto-detection
   if (context->allow_autoscan) {
 	  TRACE("allow_autoscan is true");
+	  LOGDE(DEBUG_LEVEL, "allow_autoscan is true" );
     const struct nfc_driver_list *pndl = nfc_drivers;
     if(!pndl){
     	TRACE("nfc_drivers is null");
+    	LOGDE(DEBUG_LEVEL, "nfc_drivers is null" );
     }
     while (pndl) {
       TRACE("while pndl ...");
+      LOGDE(DEBUG_LEVEL, "scanning device" );
       const struct nfc_driver *ndr = pndl->driver;
 
       if ((ndr->scan_type == NOT_INTRUSIVE) || ((context->allow_intrusive_scan) && (ndr->scan_type == INTRUSIVE))) {
     	  TRACE("trace scan is == not intrusive or  scan type is intrusive and intrusive scan is allowed ");
+    	  LOGDE(DEBUG_LEVEL, "trace scan is == not intrusive or  scan type is intrusive and intrusive scan is allowed" );
         size_t _device_found = ndr->scan(context, connstrings + (device_found), connstrings_len - (device_found));
+
+
         log_put(LOG_GROUP, LOG_CATEGORY, NFC_LOG_PRIORITY_DEBUG, "%ld device(s) found using %s driver", (unsigned long) _device_found, ndr->name);
         if (_device_found > 0) {
         	TRACE("device found is > 0: true");
@@ -415,6 +449,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
         }
       } // scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE
       TRACE("// scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE");
+      LOGDE(DEBUG_LEVEL, "scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE" );
       pndl = pndl->next;
     }
   } else if (context->user_defined_device_count == 0) {
@@ -422,6 +457,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 
   }
   TRACE("Returning Device found");
+  LOGDE(DEBUG_LEVEL, "Returning Device found" );
   return device_found;
 }
 

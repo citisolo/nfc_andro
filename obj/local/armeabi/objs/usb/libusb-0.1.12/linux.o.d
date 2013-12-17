@@ -1,5 +1,5 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/usb/libusb-0.1.12/linux.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/linux.c \
+obj/local/armeabi/objs/usb/libusb-0.1.12/linux.o: \
+ jni/libusb-0.1.12/linux.c \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -52,7 +52,7 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/linux.h \
+ jni/libusb-0.1.12/linux.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/stat.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/stat.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/endian.h \
@@ -65,9 +65,8 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/ioctls.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/termbits.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/ioctl_compat.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usbi.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h
+ jni/libusb-0.1.12/usbi.h jni/libusb-0.1.12/usb.h \
+ jni/libusb-0.1.12/error.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
@@ -173,7 +172,7 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/linux.h:
+jni/libusb-0.1.12/linux.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/stat.h:
 
@@ -199,8 +198,8 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/ioctl_compat.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usbi.h:
+jni/libusb-0.1.12/usbi.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/usb.h:
+jni/libusb-0.1.12/usb.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libusb-0.1.12/error.h:
+jni/libusb-0.1.12/error.h:

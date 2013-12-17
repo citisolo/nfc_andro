@@ -1,6 +1,5 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
+obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
+ jni/libnfc-andro/libnfc/nfc.c jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -47,17 +46,17 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/alloca.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/strings.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h \
+ jni/libnfc-andro/include/nfc/nfc.h \
+ jni/libnfc-andro/include/nfc/nfc-types.h \
+ jni/libnfc-andro/libnfc/nfc-internal.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/target-subr.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/debug_trace.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers/acr122_usb.h
+ jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/libnfc/target-subr.h \
+ jni/libnfc-andro/libnfc/drivers.h jni/libnfc-andro/utils/debug_trace.h \
+ jni/jlog.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
+ jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
+jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h:
 
@@ -151,20 +150,24 @@
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc.h:
+jni/libnfc-andro/include/nfc/nfc.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/include/nfc/nfc-types.h:
+jni/libnfc-andro/include/nfc/nfc-types.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/nfc-internal.h:
+jni/libnfc-andro/libnfc/nfc-internal.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log.h:
+jni/libnfc-andro/libnfc/log.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/target-subr.h:
+jni/libnfc-andro/libnfc/target-subr.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers.h:
+jni/libnfc-andro/libnfc/drivers.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/utils/debug_trace.h:
+jni/libnfc-andro/utils/debug_trace.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/drivers/acr122_usb.h:
+jni/jlog.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
+
+jni/libnfc-andro/libnfc/drivers/acr122_usb.h:

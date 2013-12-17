@@ -1,7 +1,6 @@
-/home/redbandit/workspace/ndkLibNFC/obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/log-internal.o: \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log-internal.c \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log-internal.h \
- /home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h \
+obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/log-internal.o: \
+ jni/libnfc-andro/libnfc/log-internal.c \
+ jni/libnfc-andro/libnfc/log-internal.h jni/libnfc-andro/config.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -19,9 +18,9 @@
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/libnfc/log-internal.h:
+jni/libnfc-andro/libnfc/log-internal.h:
 
-/home/redbandit/workspace/ndkLibNFC/jni/libnfc-andro/config.h:
+jni/libnfc-andro/config.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdio.h:
 
