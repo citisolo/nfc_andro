@@ -117,7 +117,7 @@ include $(BUILD_SHARED_LIBRARY)
 #build logger lib
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
-com_redbandit_utils_JNIInitializer.c
+com_redbandit_utils_JNILogger.c
 
 LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)

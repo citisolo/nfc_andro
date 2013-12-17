@@ -57,7 +57,8 @@ obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
  jni/com_redbandit_utils_JNIInitializer.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h \
- jni/object-store.h jni/libnfc-andro/libnfc/drivers/acr122_usb.h
+ jni/object-store.h jni/com_redbandit_utils_JNILogger.h \
+ jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
 jni/libnfc-andro/config.h:
 
@@ -180,5 +181,7 @@ jni/com_redbandit_utils_JNIInitializer.h:
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h:
 
 jni/object-store.h:
+
+jni/com_redbandit_utils_JNILogger.h:
 
 jni/libnfc-andro/libnfc/drivers/acr122_usb.h:

@@ -3,14 +3,25 @@ package com.redbandit.utils;
 public class JNILogger {
 	
 	static String log = new String();
+    
+	
+	static {
+		System.loadLibrary("jni_initializer");
+	}
+	
+	
+	public native int register();
 
-	public static void print_debug(String message ){
+	
+	public  void print_debug(String message ){
 		
-		log += message;
+		log += "\n" + message + "\n";
 		
 	}
 	
-	public static String getLog(){
+	public  String getLog(){
 		return log;
 	}
+	
+	
 }

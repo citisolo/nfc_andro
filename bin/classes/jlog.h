@@ -27,11 +27,11 @@ OBJECT_STORE * object_store;
 #define LOGF(level, ...) if (level <= LOG_LEVEL){__android_log_print(ANDROID_LOG_FATAL, LOG_TAG, __VA_ARGS__);}
 #define LOGS(level, ...) if (level <= LOG_LEVEL){__android_log_print(ANDROID_LOG_SILENT, LOG_TAG, __VA_ARGS__);}
 
-static void jprint_debug(JNIEnv *pEnv, jclass dummyCls, jmethodID mid, ...){
+/*static void jprint_debug(JNIEnv *pEnv, jclass dummyCls, jmethodID mid, ...){
 	va_list arList;
 	va_start(arList, mid);
 	(*pEnv)->CallStaticVoidMethodV(pEnv, dummyCls, mid, arList);
 	va_end(arList);
-}
+}*/
 
 #endif /* JLOG_H_ */

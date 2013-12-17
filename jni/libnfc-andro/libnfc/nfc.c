@@ -89,6 +89,7 @@
 #include "drivers.h"
 #include "debug_trace.h"
 #include "jlog.h"
+#include "com_redbandit_utils_JNILogger.h"
 
 #define  DEBUG_LEVEL 9
 
@@ -181,6 +182,8 @@ nfc_register_driver(const struct nfc_driver *ndr)
 {
   TRACE("Registering driver");
   LOGDE(DEBUG_LEVEL, "Registering driver" );
+
+
   if (!ndr){
 	TRACE("Driver is null");
 	LOGDE(DEBUG_LEVEL, "Driver is null returning NFC_EINVARG" );
@@ -347,8 +350,9 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 {
  TRACE();
  LOGDE(DEBUG_LEVEL, "starting nfc_list_devices" );
+ jprint_debug("Starting nfc list devices");
 
- jprint_debug(object_store->pEnv, object_store->objectRef, "starting nfc_list_devices");
+
   size_t device_found = 0;
 
 #ifdef CONFFILES
