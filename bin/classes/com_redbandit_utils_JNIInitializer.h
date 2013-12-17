@@ -15,8 +15,6 @@ extern "C" {
 JNIEXPORT void JNICALL Java_com_redbandit_utils_JNIInitializer_init_1logger
   (JNIEnv *, jobject, jobject);
 
-
-
 #ifdef __cplusplus
 }
 #endif

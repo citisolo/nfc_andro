@@ -8,12 +8,14 @@
 #ifndef OBJECT_STORE_H_
 #define OBJECT_STORE_H_
 #include <jni.h>
+#include <pthread.h>
 
- struct object_store{
-     JNIEnv * pEnv;
+ __thread struct jobject_store{
+     JavaVM * jvm ;
 	 jobject  objectRef;
 
 } ;
 
- typedef struct object_store OBJECT_STORE;
+ //typedef struct object_store OBJECT_STORE;
+ extern struct  jobject_store *object_store;
 #endif /* OBJECT_STORE_H_ */

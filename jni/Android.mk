@@ -122,8 +122,9 @@ com_redbandit_utils_JNIInitializer.c
 LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)
 
+LOCAL_MODULE:= jlog
+LOCAL_LDLIBS += -ldvm  -llog 
+LOCAL_CFLAGS += 
 
-
-LOCAL_MODULE := jlog
 
 include $(BUILD_SHARED_LIBRARY)

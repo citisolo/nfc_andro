@@ -35,7 +35,23 @@ obj/local/armeabi/objs/jnfc/com_redbandit_ndklibnfc_NfcReader.o: \
  jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/utils/debug_trace.h \
  jni/com_redbandit_ndklibnfc_NfcReader.h jni/jlog.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
- jni/com_redbandit_utils_JNIInitializer.h jni/object-store.h
+ jni/com_redbandit_utils_JNIInitializer.h jni/object-store.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pthread.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/time.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/siginfo.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/signal.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/limits.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/limits.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/limits.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/internal_types.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/limits.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/syslimits.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/page.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/signal.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sched.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h:
 
@@ -116,3 +132,35 @@ jni/jlog.h:
 jni/com_redbandit_utils_JNIInitializer.h:
 
 jni/object-store.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pthread.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/time.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/siginfo.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/signal.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/limits.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/limits.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/limits.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/internal_types.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/machine/limits.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/syslimits.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/page.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/signal.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sched.h:

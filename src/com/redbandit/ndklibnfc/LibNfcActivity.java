@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.widget.TextView;
+//import com.android.internal.util.*;
+import com.redbandit.utils.*;
 
 
 public class LibNfcActivity extends Activity {
@@ -16,6 +18,9 @@ public class LibNfcActivity extends Activity {
 		TextView tv = new TextView(this);
 		String out = new String() ;
 		tv.setTextSize(30);
+		
+		JNILogger jLogger;
+		JNIInitializer logInitializer = new JNIInitializer(jLogger = new JNILogger());
 		
 		
 		NfcReader nfc_reader = new NfcReader();
@@ -55,6 +60,7 @@ public class LibNfcActivity extends Activity {
 			nfc_reader.jnfc_exit(ctx);
 		}
 		
+		out += jLogger.getLog();
 		tv.setText(out);
 		this.setContentView(tv);
 	}

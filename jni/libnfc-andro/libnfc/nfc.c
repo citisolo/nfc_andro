@@ -134,6 +134,7 @@ struct nfc_driver_list {
 };
 
 const struct nfc_driver_list *nfc_drivers = NULL;
+struct jobject_store *object_store;
 
 static void
 nfc_drivers_init(void)
@@ -347,8 +348,10 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 {
  TRACE();
  LOGDE(DEBUG_LEVEL, "starting nfc_list_devices" );
+ LOGDE(DEBUG_LEVEL, "starting nfc_list_devices" );
+ //jprint_debug("starting nfc_list_devices");
+ LOGDE(LOG_LEVEL, "jprint_debug: objectRef is now %d", (long)objectRef);
 
- jprint_debug(object_store->pEnv, object_store->objectRef, "starting nfc_list_devices");
   size_t device_found = 0;
 
 #ifdef CONFFILES
