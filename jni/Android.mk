@@ -110,6 +110,20 @@ $(LOCAL_PATH)
 
 LOCAL_MODULE := jnfc
 LOCAL_STATIC_LIBRARIES:= libnfc 
-LOCAL_LDLIBS := -llog
+LOCAL_LDLIBS := -llog 
+
+include $(BUILD_SHARED_LIBRARY)
+
+#build logger lib
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := \
+com_redbandit_utils_JNIInitializer.c
+
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)
+
+
+
+LOCAL_MODULE := jlog
 
 include $(BUILD_SHARED_LIBRARY)
