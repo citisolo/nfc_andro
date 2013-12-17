@@ -9,10 +9,8 @@
 #define JLOG_H_
 
 #include <android/log.h>
-#include "com_redbandit_utils_JNIInitializer.h"
-#include "object-store.h"
 
-OBJECT_STORE * object_store;
+
 
 #define LOG_LEVEL 9
 #define LOG_TAG "JLOGGER"

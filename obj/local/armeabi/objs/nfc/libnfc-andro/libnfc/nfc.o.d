@@ -54,10 +54,9 @@ obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
  jni/libnfc-andro/libnfc/drivers.h jni/libnfc-andro/utils/debug_trace.h \
  jni/jlog.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
- jni/com_redbandit_utils_JNIInitializer.h \
+ jni/com_redbandit_ndklibnfc_NfcReader.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h \
- jni/object-store.h jni/com_redbandit_ndklibnfc_NfcReader.h \
  jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
 jni/libnfc-andro/config.h:
@@ -174,14 +173,10 @@ jni/jlog.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
 
-jni/com_redbandit_utils_JNIInitializer.h:
+jni/com_redbandit_ndklibnfc_NfcReader.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h:
-
-jni/object-store.h:
-
-jni/com_redbandit_ndklibnfc_NfcReader.h:
 
 jni/libnfc-andro/libnfc/drivers/acr122_usb.h:
