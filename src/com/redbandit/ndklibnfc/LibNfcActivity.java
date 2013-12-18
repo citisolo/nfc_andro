@@ -4,18 +4,40 @@ import android.os.Bundle;
 
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 
 public class LibNfcActivity extends Activity {
+	
+	 TextView logView ;
+	 Button   btnStart ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_lib_nfc);
-		TextView tv = new TextView(this);
+		setContentView(R.layout.activity_lib_nfc);
+		logView = (TextView)findViewById(R.id.vwLog);
+		btnStart = (Button) findViewById(R.id.btnStart);
+		
+		//logView.setBackgroundColor(255);
+		
+		//btnStart.setOnClickListener(l)
+		//this.setContentView(tv);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.lib_nfc, menu);
+		return true;
+	}
+	
+    public void start_server(View view){
+    	TextView tv = new TextView(this);
 		String out = new String() ;
-		tv.setTextSize(30);
+		logView.setTextSize(15);
 		
 		
 		NfcReader nfc_reader = new NfcReader();
@@ -61,18 +83,9 @@ public class LibNfcActivity extends Activity {
 			nfc_reader.jnfc_exit(ctx);
 		}
 		out += nfc_reader.log;
-		tv.setText(out);
-		this.setContentView(tv);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.lib_nfc, menu);
-		return true;
-	}
-	
-
+		logView.setText(out);
+    	
+    }
    	
 	
 

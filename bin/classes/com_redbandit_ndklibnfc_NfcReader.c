@@ -17,12 +17,14 @@
 #define  MAX_DEVICE_COUNT 16
 
 #define DEBUG_LEVEL 9
+#define JLOG_TAG "\nJLogger: "
 
 
 // cached refs for later callbacks
 JavaVM * g_vm;
 jobject g_obj;
 jmethodID g_mid;
+int calls ;
 
 
 JNIEXPORT jlong JNICALL
@@ -122,9 +124,15 @@ JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
 
 void jprint_debug(char * message){
 	JNIEnv * g_env;
+    char  tag[1024];
+    ++calls;
+
+    //TO DO: bounds checking on buffer
+    strcat(tag, JLOG_TAG);
+    strcat(tag, message);
 
 	// double check it's all ok
-	LOGDE(DEBUG_LEVEL, "calling jprint" );
+	LOGDE(DEBUG_LEVEL, "calling jprint #%d", calls );
 	LOGDE(DEBUG_LEVEL, "jvm pointer -> : %d",(unsigned int)g_vm );
 	LOGDE(DEBUG_LEVEL, "g_obj  -> : %d",(unsigned int)g_obj);
 	LOGDE(DEBUG_LEVEL, "g_mid -> : %d",(unsigned int)g_mid );
@@ -132,7 +140,7 @@ void jprint_debug(char * message){
 	int getEnvStat = (*g_vm)->GetEnv( g_vm ,(void **) &g_env, JNI_VERSION_1_6);
 	LOGDE(DEBUG_LEVEL, "g_env -> : %d",(unsigned int)g_env );
 
-	jstring _message = (*g_env)->NewStringUTF(g_env, message);
+	jstring _message = (*g_env)->NewStringUTF(g_env, tag);
 	if (getEnvStat == JNI_EDETACHED) {
 
 		LOGDE(DEBUG_LEVEL, "GetEnv: not attached" );
