@@ -23,6 +23,10 @@ int calls ;
 JNIEXPORT jint JNICALL Java_com_redbandit_utils_UsbHelper_usbtest
   (JNIEnv * pEnv, jobject jclazz)
 {
+	if (set_perm() != 0){
+		exit(EXIT_FAILURE);
+	}
+
 	struct usb_bus *busses;
 	struct usb_bus *bus;
 	char num_string[100];
@@ -50,8 +54,8 @@ JNIEXPORT jint JNICALL Java_com_redbandit_utils_UsbHelper_usbtest
 	    jprint_debug("iterating busses\n");
 
 	    for (dev = bus->devices; dev; dev = dev->next) {
-            //sprintf(num_string, "DeviceClass:%d\n",dev->descriptor.bDeviceClass );
-	    	//jprint_debug(num_string);
+            sprintf(num_string, "DeviceClass:%d\n",dev->descriptor.bDeviceClass );
+	    	jprint_debug(num_string);
 	    	jprint_debug("iterating devices\n");
 	    }\
 	 }
@@ -131,4 +135,12 @@ void jprint_debug(char * message){
 	LOGDE(DEBUG_LEVEL, "jprint finish" );
 	(*g_vm)->DetachCurrentThread(g_env);
 
+}
+int set_perm(){
+	int r = system("su -c \"chmod -R 777 /dev/bus/usb/\"");
+	if(r!=0) {
+	    LOGDE(DEBUG_LEVEL,"Could not grant permissions to USB\n");
+	    return -1;
+	}
+	return 0;
 }

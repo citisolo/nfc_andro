@@ -29,7 +29,7 @@ public class LibNfcActivity extends Activity {
 		logView.setMovementMethod(new ScrollingMovementMethod());
 		//logView.setBackgroundColor(255);
 		
-		nfc_reader = new NfcReader(this.logView);
+		nfc_reader = new NfcReader();
 		usbHelper = new UsbHelper();
 		
 		
@@ -45,7 +45,27 @@ public class LibNfcActivity extends Activity {
 	}
 	
     public void start_server(View view){
-    	String out = new String() ;
+    	diagnose();
+    	
+    }
+   	
+    public void test_usb(View view){
+    	TextView tv = new TextView(this);
+		String out = new String() ;
+		
+	
+		
+		if (usbHelper.usbtest() == 0){
+			out+= "LibNfcActivity: usb test returned 0\n";
+		}
+		
+		out += usbHelper.log;
+		logView.setText(out);
+		usbHelper.clearLog();
+    }
+    
+    private void test_nfc(){
+        String out = new String() ;
 		
 		/*int logOK = nfc_reader.register();
 		if (logOK != 0 ){
@@ -89,21 +109,42 @@ public class LibNfcActivity extends Activity {
 		}
 		out += nfc_reader.log;
 		logView.setText(out);
+		nfc_reader.clearLog();
+    }
+    
+    private void diagnose ()
+    {
+    	logView.setText("");
+        String out = new String() ;
+		
+		/*int logOK = nfc_reader.register();
+		if (logOK != 0 ){
+			
+		}*/
+		/*
+		long ctx = nfc_reader.jnfc_init(); // initialize context
+		if (ctx == 0){
+			//print failure message 
+			out += "LibNfcActivity: context is null\n";
+			
+			
+		}
+		else
+		{
+			//Print success message
+			out += "\nLibNfcActivity: context = 0x" + ctx  ;
+		    
+			String version = nfc_reader.jnfc_version();
+		    out += "\nLibNfcActivity: Version is: " + version;    
+			
+			
+			nfc_reader.jnfc_exit(ctx);
+		}*/
+        
+		nfc_reader.device_test();
+		out += nfc_reader.log;
+		logView.setText(out);
+		nfc_reader.clearLog();
     	
     }
-   	
-    public void test_usb(View view){
-    	TextView tv = new TextView(this);
-		String out = new String() ;
-		
-	
-		
-		if (usbHelper.usbtest() == 0){
-			out+= "LibNfcActivity: usb test returned 0\n";
-		}
-		
-		out += usbHelper.log;
-		logView.setText(out);
-    }
-
 }

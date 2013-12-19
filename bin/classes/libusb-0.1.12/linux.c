@@ -33,6 +33,7 @@
 #endif
 
 
+
 static char usb_path[PATH_MAX + 1] = "";
 
 static int device_open(struct usb_device *dev)

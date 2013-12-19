@@ -15,7 +15,9 @@ public class UsbHelper {
 	public UsbHelper(){
 		register();
 	}
-	
+	public void clearLog(){
+		log = "";
+	}
 	public  void print_debug(String message ){
 		
 		log += "\n" + tag + message + "\n";
