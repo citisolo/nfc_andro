@@ -42,10 +42,10 @@ JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1device
 /*
  * Class:     com_redbandit_ndklibnfc_NfcReader
  * Method:    register
- * Signature: ()I
+ * Signature: (Landroid/widget/TextView;)I
  */
 JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jobject);
 
 void jprint_debug(char * message);
 

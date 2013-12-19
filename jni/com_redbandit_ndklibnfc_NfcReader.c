@@ -23,6 +23,8 @@
 // cached refs for later callbacks
 JavaVM * g_vm;
 jobject g_obj;
+jobject g_tvObj;
+jmethodID g_tvMid;
 jmethodID g_mid;
 int calls ;
 
@@ -90,34 +92,39 @@ Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1devices
 
 JNIEXPORT jint
 JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
-  (JNIEnv * pEnv, jobject jclazz)
+  (JNIEnv * pEnv, jobject jclazz , jobject tv)
 {
 	LOGDE(DEBUG_LEVEL, "registering callback" );
 	(*pEnv)->GetJavaVM(pEnv, &g_vm);
 	// convert local to global reference
 		// (local will die after this method call)
 	g_obj = (*pEnv)->NewGlobalRef(pEnv, jclazz);
+    g_tvObj  = (*pEnv)->NewGlobalRef(pEnv, tv);
+
 
 	// save refs for callback
 	jclass g_clazz = (*pEnv)->GetObjectClass(pEnv, g_obj);
-
-	if (g_clazz == 0) {
-	  LOGDE(DEBUG_LEVEL, "Failed to find class" );
+    jclass g_tvClazz = (*pEnv)->GetObjectClass(pEnv, g_tvObj);
+	if (g_clazz == 0 || g_tvClazz == 0) {
+	  LOGDE(DEBUG_LEVEL, "Failed to find obj classes" );
 	  return -1;
 
 	}
 
 	g_mid = (*pEnv)->GetMethodID(pEnv, g_clazz, "print_debug", "(Ljava/lang/String;)V");
-	if (g_mid == 0) {
+	g_tvMid = (*pEnv)->GetMethodID(pEnv, g_tvClazz, "append", "(Ljava/lang/CharSequence;)V");
+	if (g_mid == 0 || g_tvMid == 0) {
 
-	 LOGDE(DEBUG_LEVEL, "Unable to get method ref" );
+	 LOGDE(DEBUG_LEVEL, "Unable to get method refs" );
      return -1;
 	}
 
 
 	LOGDE(DEBUG_LEVEL, "jvm pointer -> : %d",(unsigned int)g_vm );
 	LOGDE(DEBUG_LEVEL, "g_obj  -> : %d",(unsigned int)g_obj);
+	LOGDE(DEBUG_LEVEL, "g_tvObj -> : %d",(unsigned int)g_tvObj );
 	LOGDE(DEBUG_LEVEL, "g_mid -> : %d",(unsigned int)g_mid );
+	LOGDE(DEBUG_LEVEL, "g_tvMid -> : %d",(unsigned int)g_tvMid );
    return 0;
 
 }
@@ -135,12 +142,16 @@ void jprint_debug(char * message){
 	LOGDE(DEBUG_LEVEL, "calling jprint #%d", calls );
 	LOGDE(DEBUG_LEVEL, "jvm pointer -> : %d",(unsigned int)g_vm );
 	LOGDE(DEBUG_LEVEL, "g_obj  -> : %d",(unsigned int)g_obj);
+	LOGDE(DEBUG_LEVEL, "g_tvObj -> : %d",(unsigned int)g_tvObj );
 	LOGDE(DEBUG_LEVEL, "g_mid -> : %d",(unsigned int)g_mid );
+	LOGDE(DEBUG_LEVEL, "g_tvMid -> : %d",(unsigned int)g_tvMid );
 
 	int getEnvStat = (*g_vm)->GetEnv( g_vm ,(void **) &g_env, JNI_VERSION_1_6);
 	LOGDE(DEBUG_LEVEL, "g_env -> : %d",(unsigned int)g_env );
 
 	jstring _message = (*g_env)->NewStringUTF(g_env, message);
+	jstring  m = (*g_env)->NewString(g_env, message, sizeof(message));
+
 	if (getEnvStat == JNI_EDETACHED) {
 
 		LOGDE(DEBUG_LEVEL, "GetEnv: not attached" );
@@ -156,6 +167,7 @@ void jprint_debug(char * message){
 	}
 
 	(*g_env)->CallVoidMethod(g_env,g_obj, g_mid, _message);
+	(*g_env)->CallVoidMethod(g_env,g_tvObj, g_tvMid,m);
 
 	if ((*g_env)->ExceptionCheck(g_env)) {
 		(*g_env)->ExceptionDescribe(g_env);
