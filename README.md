@@ -26,13 +26,12 @@ This library depends on
 
 Building 
 =================
-Use the ndk in the following way;
-cd /path/to/jni folder/
-ndk-build 
+The project now has NDK support which just means you no longer have to run ndk-build manually. If any of the NDK classes are modified then javah has to be run manually to re-generate header(warning: there is defined code in the headers so before running javah make sure to copy out the code and re-paste into header file)
+
+Build with eclipse as you would any other application
 
 
 Installation
 =================
-*note: only the backend has been built so compiling it into an apk will achieve nothing . 
-currently i copy the binary file which is stored in the libs/armeabi  to the /data/local/tmp 
-(android won't allow you to run executable on sdcard) connect the device and then execute the program on the command line.
+
+Eclipse should take care of this 
