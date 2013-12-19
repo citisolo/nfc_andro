@@ -30,6 +30,9 @@ public class LibNfcActivity extends Activity {
 		//logView.setBackgroundColor(255);
 		
 		nfc_reader = new NfcReader(this.logView);
+		if (nfc_reader.regOK == -1){
+			System.exit(RESULT_CANCELED);
+		}
 		usbHelper = new UsbHelper();
 		
 		

@@ -8,6 +8,7 @@ public class NfcReader  {
 	
 	public NfcContext m_context = new NfcContext();
 	private TextView cb ;
+	public int regOK;
 	
 	public String log = new String();
 	String tag = "NfcReader:";
@@ -21,7 +22,12 @@ public class NfcReader  {
 	public NfcReader(TextView tv){
 		cb = tv ;
 		cb.append( tag + "tv registered");
-		register();
+		try {
+			regOK = register(this.cb);
+		}
+		catch(Exception e){
+			cb.append(tag + "error registering textview");
+		}
 	}
 
 	public  void print_debug(String message ){
@@ -37,8 +43,8 @@ public class NfcReader  {
     public native String jnfc_version();
     public native int jnfc_list_devices(long ctx, String connstrings[], int connstrings_len);
     //size_t szFound = nfc_list_devices(context, connstrings, MAX_DEVICE_COUNT);
-    public native int register();
-	
+    public native int register(TextView tv);
+   
 
 
 }
