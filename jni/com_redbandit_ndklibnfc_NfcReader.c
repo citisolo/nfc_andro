@@ -124,12 +124,12 @@ JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
 
 void jprint_debug(char * message){
 	JNIEnv * g_env;
-    char  tag[1024];
+    //char  tag[1024];
     ++calls;
-
+    LOGDE(DEBUG_LEVEL, "jprint nfcreader" );
     //TO DO: bounds checking on buffer
-    strcat(tag, JLOG_TAG);
-    strcat(tag, message);
+    //strcat(tag, JLOG_TAG);
+    //strcat(tag, message);
 
 	// double check it's all ok
 	LOGDE(DEBUG_LEVEL, "calling jprint #%d", calls );
@@ -140,7 +140,7 @@ void jprint_debug(char * message){
 	int getEnvStat = (*g_vm)->GetEnv( g_vm ,(void **) &g_env, JNI_VERSION_1_6);
 	LOGDE(DEBUG_LEVEL, "g_env -> : %d",(unsigned int)g_env );
 
-	jstring _message = (*g_env)->NewStringUTF(g_env, tag);
+	jstring _message = (*g_env)->NewStringUTF(g_env, message);
 	if (getEnvStat == JNI_EDETACHED) {
 
 		LOGDE(DEBUG_LEVEL, "GetEnv: not attached" );

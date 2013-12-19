@@ -17,6 +17,21 @@
 
 #include "linux.h"
 #include "usbi.h"
+#include "jconfig.h"
+
+
+/*#ifdef JDEBUG
+   #include  "com_redbandit_ndklibnfc_NfcReader.h"
+#elif defined UDEBUG
+   #include "com_redbandit_utils_UsbHelper.h"
+#endif*/
+
+#ifdef JDEBUG || UDEBUG
+   #define JPRINT(message)  jprint_debug(message) ;
+#else
+   #define JPRINT(message)
+#endif
+
 
 static char usb_path[PATH_MAX + 1] = "";
 
@@ -365,6 +380,8 @@ int usb_os_find_busses(struct usb_bus **busses)
 
 int usb_os_find_devices(struct usb_bus *bus, struct usb_device **devices)
 {
+  JPRINT("usb_os_find_devices:finding devices");
+
   struct usb_device *fdev = NULL;
   DIR *dir;
   struct dirent *entry;
@@ -373,9 +390,11 @@ int usb_os_find_devices(struct usb_bus *bus, struct usb_device **devices)
   snprintf(dirpath, PATH_MAX, "%s/%s", usb_path, bus->dirname);
 
   dir = opendir(dirpath);
-  if (!dir)
+  if (!dir){
     USB_ERROR_STR(-errno, "couldn't opendir(%s): %s", dirpath,
 	strerror(errno));
+    JPRINT("usb_os_find_devices:couldn't opendir");
+  }
 
   while ((entry = readdir(dir)) != NULL) {
     unsigned char device_desc[DEVICE_DESC_LENGTH];
@@ -407,7 +426,7 @@ int usb_os_find_devices(struct usb_bus *bus, struct usb_device **devices)
         if (usb_debug >= 2)
           fprintf(stderr, "usb_os_find_devices: Couldn't open %s\n",
                   filename);
-
+        JPRINT("usb_os_find_devices: Couldn't open");
         free(dev);
         continue;
       }
@@ -425,7 +444,7 @@ int usb_os_find_devices(struct usb_bus *bus, struct usb_device **devices)
     if (ret < 0) {
       if (usb_debug)
         fprintf(stderr, "usb_os_find_devices: Couldn't read descriptor\n");
-
+        JPRINT("usb_os_find_devices:Couldn't read descriptor");
       free(dev);
 
       goto err;

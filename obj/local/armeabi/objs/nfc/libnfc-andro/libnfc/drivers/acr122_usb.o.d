@@ -60,7 +60,7 @@ obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/drivers/acr122_usb.o: \
  jni/libnfc-andro/libnfc/chips/pn53x-internal.h \
  jni/libnfc-andro/libnfc/log.h \
  jni/libnfc-andro/libnfc/chips/pn53x-internal.h \
- jni/libnfc-andro/libnfc/drivers/acr122_usb.h
+ jni/libnfc-andro/libnfc/drivers/acr122_usb.h jni/jconfig.h
 
 jni/libnfc-andro/config.h:
 
@@ -187,3 +187,5 @@ jni/libnfc-andro/libnfc/log.h:
 jni/libnfc-andro/libnfc/chips/pn53x-internal.h:
 
 jni/libnfc-andro/libnfc/drivers/acr122_usb.h:
+
+jni/jconfig.h:

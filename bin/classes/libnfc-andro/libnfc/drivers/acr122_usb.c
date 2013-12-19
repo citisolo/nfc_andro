@@ -68,6 +68,14 @@ Thanks to d18c7db and Okko for example code
 #include "chips/pn53x.h"
 #include "chips/pn53x-internal.h"
 #include "drivers/acr122_usb.h"
+#include "jconfig.h"
+
+
+#ifdef JDEBUG || UDEBUG
+   #define JPRINT(message)  jprint_debug(message) ;
+#else
+   #define JPRINT(message)
+#endif
 
 #define ACR122_USB_DRIVER_NAME "acr122_usb"
 
@@ -298,7 +306,7 @@ static size_t
 acr122_usb_scan(const nfc_context *context, nfc_connstring connstrings[], const size_t connstrings_len)
 {
   (void)context;
-
+  JPRINT("driver:scanning usb");
   usb_prepare();
 
   size_t device_found = 0;
@@ -306,8 +314,9 @@ acr122_usb_scan(const nfc_context *context, nfc_connstring connstrings[], const 
   struct usb_bus *bus;
   for (bus = usb_get_busses(); bus; bus = bus->next) {
     struct usb_device *dev;
-
+    JPRINT("got the busses now lets iterate devices");
     for (dev = bus->devices; dev; dev = dev->next, uiBusIndex++) {
+    	JPRINT("for every device get information");
       for (size_t n = 0; n < sizeof(acr122_usb_supported_devices) / sizeof(struct acr122_usb_supported_device); n++) {
         if ((acr122_usb_supported_devices[n].vendor_id == dev->descriptor.idVendor) &&
             (acr122_usb_supported_devices[n].product_id == dev->descriptor.idProduct)) {
@@ -323,24 +332,27 @@ acr122_usb_scan(const nfc_context *context, nfc_connstring connstrings[], const 
           }
 
           usb_dev_handle *udev = usb_open(dev);
+          JPRINT("driver:opening device");
           if (udev == NULL)
             continue;
 
           // Set configuration
           // acr122_usb_get_usb_device_name (dev, udev, pnddDevices[device_found].acDevice, sizeof (pnddDevices[device_found].acDevice));
           log_put(LOG_GROUP, LOG_CATEGORY, NFC_LOG_PRIORITY_DEBUG, "device found: Bus %s Device %s Name %s", bus->dirname, dev->filename, acr122_usb_supported_devices[n].name);
+          JPRINT("Driver:we found something");
           usb_close(udev);
           snprintf(connstrings[device_found], sizeof(nfc_connstring), "%s:%s:%s", ACR122_USB_DRIVER_NAME, bus->dirname, dev->filename);
           device_found++;
           // Test if we reach the maximum "wanted" devices
           if (device_found == connstrings_len) {
+
             return device_found;
           }
         }
       }
     }
   }
-
+  JPRINT("Driver:obviously found nothing");
   return device_found;
 }
 

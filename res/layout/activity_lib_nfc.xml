@@ -20,6 +20,7 @@
         android:height="450dp"
         android:hint="#FFFFFF"
         android:scrollbars="vertical"
+        android:maxLines = "1000"
         android:text="No log input"
         android:textColor="#FFFFFF"
         android:width="420dp" />
@@ -32,5 +33,16 @@
         android:layout_alignParentBottom="true"
         android:onClick="start_server"
         android:text="Start server" />
+
+    <Button
+        android:id="@+id/btnTestUsb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnStart"
+        android:layout_alignBottom="@+id/btnStart"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/btnStart"
+        android:onClick="test_usb"
+        android:text="test usb" />
 
 </RelativeLayout>

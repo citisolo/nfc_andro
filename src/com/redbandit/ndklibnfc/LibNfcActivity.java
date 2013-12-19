@@ -3,16 +3,20 @@ package com.redbandit.ndklibnfc;
 import android.os.Bundle;
 
 import android.app.Activity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
-
+import com.redbandit.utils.*;
 
 public class LibNfcActivity extends Activity {
 	
-	 TextView logView ;
+	TextView logView ;
 	 Button   btnStart ;
+	 Button   btnTestUsb;
+	 NfcReader nfc_reader;
+	 UsbHelper usbHelper;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +24,14 @@ public class LibNfcActivity extends Activity {
 		setContentView(R.layout.activity_lib_nfc);
 		logView = (TextView)findViewById(R.id.vwLog);
 		btnStart = (Button) findViewById(R.id.btnStart);
-		
+		btnTestUsb = (Button) findViewById(R.id.btnTestUsb);
+		logView.setTextSize(15);
+		logView.setMovementMethod(new ScrollingMovementMethod());
 		//logView.setBackgroundColor(255);
+		
+		nfc_reader = new NfcReader(this.logView);
+		usbHelper = new UsbHelper();
+		
 		
 		//btnStart.setOnClickListener(l)
 		//this.setContentView(tv);
@@ -35,17 +45,12 @@ public class LibNfcActivity extends Activity {
 	}
 	
     public void start_server(View view){
-    	TextView tv = new TextView(this);
-		String out = new String() ;
-		logView.setTextSize(15);
+    	String out = new String() ;
 		
-		
-		NfcReader nfc_reader = new NfcReader();
-		int logOK = nfc_reader.register();
+		/*int logOK = nfc_reader.register();
 		if (logOK != 0 ){
 			
-		}
-		
+		}*/
 		
 		long ctx = nfc_reader.jnfc_init(); // initialize context
 		if (ctx == 0){
@@ -87,6 +92,18 @@ public class LibNfcActivity extends Activity {
     	
     }
    	
+    public void test_usb(View view){
+    	TextView tv = new TextView(this);
+		String out = new String() ;
+		
 	
+		
+		if (usbHelper.usbtest() == 0){
+			out+= "LibNfcActivity: usb test returned 0\n";
+		}
+		
+		out += usbHelper.log;
+		logView.setText(out);
+    }
 
 }

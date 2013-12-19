@@ -116,3 +116,21 @@ LOCAL_LDLIBS := -llog
 
 include $(BUILD_SHARED_LIBRARY)
 
+#Build UsbHelper Library
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := \
+com_redbandit_utils_UsbHelper.c \
+
+
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)/libusb-0.1.12 \
+$(LOCAL_PATH)
+
+
+LOCAL_MODULE := usbhelper
+LOCAL_STATIC_LIBRARIES:= libusb \
+
+LOCAL_LDLIBS := -llog 
+
+include $(BUILD_SHARED_LIBRARY)
+
