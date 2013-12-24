@@ -17,6 +17,7 @@ public class LibNfcActivity extends Activity {
 	 Button   btnTestUsb;
 	 NfcReader nfc_reader;
 	 UsbHelper usbHelper;
+	 JNILogger nLogger;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class LibNfcActivity extends Activity {
 		
 		nfc_reader = new NfcReader();
 		usbHelper = new UsbHelper();
-		
+		nLogger = new JNILogger();
 		
 		//btnStart.setOnClickListener(l)
 		//this.setContentView(tv);
@@ -59,7 +60,7 @@ public class LibNfcActivity extends Activity {
 			out+= "LibNfcActivity: usb test returned 0\n";
 		}
 		
-		out += usbHelper.log;
+		out += nLogger.log;
 		logView.setText(out);
 		usbHelper.clearLog();
     }
@@ -107,7 +108,7 @@ public class LibNfcActivity extends Activity {
 			
 			nfc_reader.jnfc_exit(ctx);
 		}
-		out += nfc_reader.log;
+		out += nLogger.log;
 		logView.setText(out);
 		nfc_reader.clearLog();
     }
@@ -142,9 +143,9 @@ public class LibNfcActivity extends Activity {
 		}*/
         
 		nfc_reader.device_test();
-		out += nfc_reader.log;
+		out += nLogger.log;
 		logView.setText(out);
-		nfc_reader.clearLog();
+		nLogger.clearLog();
     	
     }
 }

@@ -35,7 +35,7 @@ obj/local/armeabi/objs/jnfc/com_redbandit_ndklibnfc_NfcReader.o: \
  jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/utils/debug_trace.h \
  jni/com_redbandit_ndklibnfc_NfcReader.h jni/jlog.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
- jni/jconfig.h
+ jni/com_redbandit_utils_JNILogger.h jni/jconfig.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdint.h:
 
@@ -112,5 +112,7 @@ jni/com_redbandit_ndklibnfc_NfcReader.h:
 jni/jlog.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
+
+jni/com_redbandit_utils_JNILogger.h:
 
 jni/jconfig.h:

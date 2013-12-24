@@ -10,18 +10,13 @@ public class UsbHelper {
 	}
 	
 	public native int usbtest();
-	public native int register();
-	
+
 	public UsbHelper(){
-		register();
+		
 	}
 	public void clearLog(){
 		log = "";
 	}
-	public  void print_debug(String message ){
-		
-		log += "\n" + tag + message + "\n";
-		
-	}
+
 	
 }

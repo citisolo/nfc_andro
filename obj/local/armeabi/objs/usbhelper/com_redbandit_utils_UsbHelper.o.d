@@ -45,7 +45,8 @@ obj/local/armeabi/objs/usbhelper/com_redbandit_utils_UsbHelper.o: \
  jni/com_redbandit_utils_UsbHelper.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  jni/jlog.h \
- /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
+ jni/com_redbandit_utils_JNILogger.h
 
 jni/libusb-0.1.12/usb.h:
 
@@ -140,3 +141,5 @@ jni/com_redbandit_utils_UsbHelper.h:
 jni/jlog.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
+
+jni/com_redbandit_utils_JNILogger.h:

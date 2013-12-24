@@ -89,7 +89,7 @@
 #include "drivers.h"
 #include "debug_trace.h"
 #include "jlog.h"
-#include "com_redbandit_ndklibnfc_NfcReader.h"
+
 
 #define  DEBUG_LEVEL 9
 
@@ -350,7 +350,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 {
  TRACE();
  LOGDE(DEBUG_LEVEL, "starting nfc_list_devices" );
- jprint_debug("Starting nfc list devices");
+ JPRINT("Starting nfc list devices");
 
 
   size_t device_found = 0;
@@ -358,7 +358,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 #ifdef CONFFILES
   TRACE("CONNFILES defined");
   LOGDE(DEBUG_LEVEL, "CONNFILES defined" );
-  jprint_debug("CONNFILES defined");
+  JPRINT("CONNFILES defined");
   // Load manually configured devices (from config file and env variables)
   // TODO From env var...
   //char buffer[100];
@@ -371,7 +371,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
 
   for (uint32_t i = 0; i < context->user_defined_device_count; i++) {
 	  LOGDE(DEBUG_LEVEL, "iterate through user defined device" );
-	  jprint_debug("iterate through user defined device");
+	  JPRINT("iterate through user defined device");
     if (context->user_defined_devices[i].optional) {
       // let's make sure the device exists
       nfc_device *pnd = NULL;
@@ -434,17 +434,17 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
   if (context->allow_autoscan) {
 	  TRACE("allow_autoscan is true");
 	  LOGDE(DEBUG_LEVEL, "allow_autoscan is true" );
-	  jprint_debug("allow_autoscan is true");
+	  JPRINT("allow_autoscan is true");
     const struct nfc_driver_list *pndl = nfc_drivers;
     if(!pndl){
     	TRACE("nfc_drivers is null");
     	LOGDE(DEBUG_LEVEL, "nfc_drivers is null" );
-    	jprint_debug("nfc_drivers is null");
+    	JPRINT("nfc_drivers is null");
     }
     while (pndl) {
       TRACE("while pndl ...");
       LOGDE(DEBUG_LEVEL, "scanning device" );
-      jprint_debug("scanning device");
+      JPRINT("scanning device");
       const struct nfc_driver *ndr = pndl->driver;
 
       if ((ndr->scan_type == NOT_INTRUSIVE) || ((context->allow_intrusive_scan) && (ndr->scan_type == INTRUSIVE))) {
@@ -463,7 +463,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
       } // scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE
       TRACE("// scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE");
       LOGDE(DEBUG_LEVEL, "scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE" );
-      jprint_debug("scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE");
+      JPRINT("scan_type is INTRUSIVE but not allowed or NOT_AVAILABLE");
 
       pndl = pndl->next;
     }
@@ -473,7 +473,7 @@ nfc_list_devices(nfc_context *context, nfc_connstring connstrings[], const size_
   }
   TRACE("Returning Device found");
   LOGDE(DEBUG_LEVEL, "Returning Device found" );
-  jprint_debug("Returning Device found");
+  JPRINT("Returning Device found");
   return device_found;
 }
 

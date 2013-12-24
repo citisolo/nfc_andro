@@ -15,24 +15,6 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_com_redbandit_utils_UsbHelper_usbtest
   (JNIEnv *, jobject);
 
-/*
- * Class:     com_redbandit_utils_UsbHelper
- * Method:    register
- * Signature: ()I
- */
-JNIEXPORT jint JNICALL Java_com_redbandit_utils_UsbHelper_register
-  (JNIEnv *, jobject);
-
-
-/*WARNING !! Non generated declartions (necessary evil) if you recompile header make sure to copy out and
-paste back  */
-
-/* Name: Jprint_debug
-* Desc: Callback used to log messages native to javaland
-*
-*/
-void jprint_debug(char * message);
-
 #ifdef __cplusplus
 }
 #endif

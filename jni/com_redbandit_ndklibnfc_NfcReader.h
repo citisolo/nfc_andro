@@ -41,30 +41,11 @@ JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_jnfc_1list_1device
 
 /*
  * Class:     com_redbandit_ndklibnfc_NfcReader
- * Method:    register
- * Signature: ()I
- */
-JNIEXPORT jint JNICALL Java_com_redbandit_ndklibnfc_NfcReader_register
-  (JNIEnv *, jobject);
-
-/*
- * Class:     com_redbandit_ndklibnfc_NfcReader
  * Method:    device_test
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_redbandit_ndklibnfc_NfcReader_device_1test
   (JNIEnv *, jobject);
-
-
-/*WARNING !! Non generated declartion (necessary evil) if you recompile header make sure to copy out and 
-paste back */
-
-/* Name: Jprint_debug
- * Desc: Callback used to log messages native to javaland
- *
- */
- 
-void jprint_debug(char * message);
 
 #ifdef __cplusplus
 }

@@ -90,6 +90,21 @@ LOCAL_SRC_FILES := \
 marto_rtl_tcp_andro_tools_UsbPermissionHelper.c
 include $(BUILD_SHARED_LIBRARY)
 
+#Build logger lib
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := \
+jlog.c \
+
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)
+
+LOCAL_MODULE := logger
+LOCAL_LDLIBS := -llog 
+
+include $(BUILD_SHARED_LIBRARY)
+
+
 #Build Nfc Reader Library
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
@@ -110,7 +125,8 @@ $(LOCAL_PATH)
 
 
 LOCAL_MODULE := jnfc
-LOCAL_STATIC_LIBRARIES:= libnfc \
+LOCAL_STATIC_LIBRARIES:= libnfc 
+LOCAL_SHARED_LIBRARIES:= logger
 
 LOCAL_LDLIBS := -llog 
 
@@ -128,7 +144,8 @@ $(LOCAL_PATH)
 
 
 LOCAL_MODULE := usbhelper
-LOCAL_STATIC_LIBRARIES:= libusb \
+LOCAL_STATIC_LIBRARIES:= libusb 
+LOCAL_SHARED_LIBRARIES:= logger
 
 LOCAL_LDLIBS := -llog 
 
