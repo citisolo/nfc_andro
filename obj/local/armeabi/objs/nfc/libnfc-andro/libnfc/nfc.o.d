@@ -52,11 +52,11 @@ obj/local/armeabi/objs/nfc/libnfc-andro/libnfc/nfc.o: \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/err.h \
  jni/libnfc-andro/libnfc/log.h jni/libnfc-andro/libnfc/target-subr.h \
  jni/libnfc-andro/libnfc/drivers.h jni/libnfc-andro/utils/debug_trace.h \
- jni/jlog.h \
+ jni/jni_jlog/jlog.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h \
- jni/com_redbandit_utils_JNILogger.h \
+ jni/jni_jlog/com_redbandit_utils_JNILogger.h \
  jni/libnfc-andro/libnfc/drivers/acr122_usb.h
 
 jni/libnfc-andro/config.h:
@@ -169,7 +169,7 @@ jni/libnfc-andro/libnfc/drivers.h:
 
 jni/libnfc-andro/utils/debug_trace.h:
 
-jni/jlog.h:
+jni/jni_jlog/jlog.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
 
@@ -177,6 +177,6 @@ jni/jlog.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/inttypes.h:
 
-jni/com_redbandit_utils_JNILogger.h:
+jni/jni_jlog/com_redbandit_utils_JNILogger.h:
 
 jni/libnfc-andro/libnfc/drivers/acr122_usb.h:

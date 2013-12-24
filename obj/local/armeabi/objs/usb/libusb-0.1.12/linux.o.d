@@ -66,7 +66,10 @@ obj/local/armeabi/objs/usb/libusb-0.1.12/linux.o: \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/termbits.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/ioctl_compat.h \
  jni/libusb-0.1.12/usbi.h jni/libusb-0.1.12/usb.h \
- jni/libusb-0.1.12/error.h jni/jconfig.h
+ jni/libusb-0.1.12/error.h jni/jconfig.h jni/jni_jlog/jlog.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
+ jni/jni_jlog/com_redbandit_utils_JNILogger.h
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
@@ -205,3 +208,11 @@ jni/libusb-0.1.12/usb.h:
 jni/libusb-0.1.12/error.h:
 
 jni/jconfig.h:
+
+jni/jni_jlog/jlog.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/android/log.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h:
+
+jni/jni_jlog/com_redbandit_utils_JNILogger.h:

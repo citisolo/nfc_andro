@@ -18,7 +18,7 @@
 #include "linux.h"
 #include "usbi.h"
 #include "jconfig.h"
-
+#include "jlog.h"
 
 /*#ifdef JDEBUG
    #include  "com_redbandit_ndklibnfc_NfcReader.h"
@@ -26,11 +26,6 @@
    #include "com_redbandit_utils_UsbHelper.h"
 #endif*/
 
-#ifdef JDEBUG || UDEBUG
-   #define JPRINT(message)  jprint_debug(message) ;
-#else
-   #define JPRINT(message)
-#endif
 
 
 

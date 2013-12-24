@@ -69,13 +69,8 @@ Thanks to d18c7db and Okko for example code
 #include "chips/pn53x-internal.h"
 #include "drivers/acr122_usb.h"
 #include "jconfig.h"
+#include "jlog.h"
 
-
-#ifdef JDEBUG || UDEBUG
-   #define JPRINT(message)  jprint_debug(message) ;
-#else
-   #define JPRINT(message)
-#endif
 
 #define ACR122_USB_DRIVER_NAME "acr122_usb"
 

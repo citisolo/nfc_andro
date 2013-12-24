@@ -6,6 +6,8 @@ public class UsbHelper {
 	String tag = "UsbHelper:";
 	
 	static {
+		System.loadLibrary("logger");
+		System.loadLibrary("usb");
 		System.loadLibrary("usbhelper");
 	}
 	

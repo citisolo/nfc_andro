@@ -13,6 +13,9 @@ public class NfcReader  {
 	String tag = "NfcReader:";
 	
 	static {
+		System.loadLibrary("logger");
+		System.loadLibrary("usb");
+		System.loadLibrary("nfc");
 		System.loadLibrary("jnfc");
 	}
 
