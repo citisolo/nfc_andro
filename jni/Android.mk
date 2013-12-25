@@ -12,30 +12,6 @@ subdirs := $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, jni_jlog\ jni_lib
 include $(subdirs)
 
 
-#build executable file 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES:= \
- pn53x-diagnose.c \
- 
-LOCAL_C_INCLUDES += \
-$(LOCAL_PATH)/libnfc-andro \
-$(LOCAL_PATH)/libnfc-andro/include \
-$(LOCAL_PATH)/libnfc-andro/include/nfc \
-$(LOCAL_PATH)/libnfc-andro/libnfc \
-$(LOCAL_PATH)/libnfc-andro/libnfc/buses \
-$(LOCAL_PATH)/libnfc-andro/libnfc/chips \
-$(LOCAL_PATH)/libnfc-andro/libnfc/drivers \
-$(LOCAL_PATH)/libnfc-andro/utils
-
-
-LOCAL_CFLAGS += -std=c99 
-LOCAL_MODULE:= nfctest
-LOCAL_LDLIBS := -llog
-LOCAL_PRELINK_MODULE:= true
-LOCAL_STATIC_LIBRARIES:= libnfc \
-libusb \
-
-#include $(BUILD_EXECUTABLE)
 
 
 

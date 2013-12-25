@@ -15,7 +15,7 @@
 
 #include "com_redbandit_utils_JNILogger.h"
 
-#ifdef JDEBUG || UDEBUG
+#ifdef JDEBUG
    #define JPRINT(message)  jprint_debug(message) ;
 #else
    #define JPRINT(message)
@@ -24,18 +24,6 @@
 
 #define DEBUG_LEVEL 9
 #define LOG_TAG "JLOGGER"
-
-#define SHM_KEY 0x1234
-#define SEM_KEY 0x5678
-
-#define OBJ_PERMS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP)
-
-#define WRITE_SEM 0
-#define READ_SEM 1
-
-#ifndef WRITE_SEM 0
-#define READ_SEM 1
-#endif
 
 #ifndef BUF_SIZE
 #define BUF_SIZE 1024
@@ -69,7 +57,6 @@ typedef struct  {
 
 shmseg vm_data ;
 
-//shmseg* vm_data = &data;
 
 
 
