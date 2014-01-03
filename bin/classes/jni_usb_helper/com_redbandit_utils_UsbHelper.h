@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_com_redbandit_utils_UsbHelper_usbtest
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_redbandit_utils_UsbHelper
+ * Method:    startDeviceSocket
+ * Signature: (Ljava/lang/String;I)V
+ */
+JNIEXPORT void JNICALL Java_com_redbandit_utils_UsbHelper_startDeviceSocket
+  (JNIEnv *, jobject, jstring, jint);
+
 #ifdef __cplusplus
 }
 #endif

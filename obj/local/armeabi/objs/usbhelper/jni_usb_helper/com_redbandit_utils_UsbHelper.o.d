@@ -43,6 +43,24 @@ obj/local/armeabi/objs/usbhelper/jni_usb_helper/com_redbandit_utils_UsbHelper.o:
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/strings.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/fcntl.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/fcntl.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/errno.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/errno.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/errno.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/socket.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/socket.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/socket.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/sockios.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/sockios.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/uio.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pthread.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/time.h \
+ /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sched.h \
  jni/jni_usb_helper/com_redbandit_utils_UsbHelper.h \
  /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/jni.h \
  jni/jni_jlog/jlog.h \
@@ -134,6 +152,42 @@ jni/libusb-0.1.12/usb.h:
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/memory.h:
 
 /home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/dirent.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/fcntl.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/fcntl.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/fcntl.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/errno.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/errno.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/errno.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sys/socket.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/socket.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/socket.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/asm/sockios.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/sockios.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/linux/uio.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/pthread.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/time.h:
+
+/home/redbandit/android-ndk-r9/platforms/android-18/arch-arm/usr/include/sched.h:
 
 jni/jni_usb_helper/com_redbandit_utils_UsbHelper.h:
 

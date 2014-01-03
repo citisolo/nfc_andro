@@ -6,17 +6,37 @@
  */
 #include <usb.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <errno.h>
+
+#include <sys/socket.h>
+#include <pthread.h>
+
 
 #include "com_redbandit_utils_UsbHelper.h"
 #include "jlog.h"
 
-#define DEBUG_LEVEL 9
 
-// cached refs for later callbacks
-JavaVM * g_vm;
-jobject g_obj;
-jmethodID g_mid;
-int calls ;
+
+
+pthread_t thread;
+
+struct sockaddr_un {
+    unsigned short sun_family;
+    char sun_path[108];
+};
+
+typedef struct fd_path_holder {
+	int fd;
+	char path[108];
+} fd_path_holder_t;
+
+
+/* size of control buffer to send/recv one file descriptor */
+#define CONTROLLEN  CMSG_LEN(sizeof(int))
+
+static struct cmsghdr   *cmptr = NULL;  /* malloc'ed first time */
+
 
 
 
@@ -69,4 +89,16 @@ int set_perm(){
 	    return -1;
 	}
 	return 0;
+}
+
+
+
+JNIEXPORT void JNICALL
+Java_com_redbandit_utils_UsbHelper_startDeviceSocket
+  (JNIEnv * pEnv, jobject jclazz , jstring address, jint fd)
+{
+
+
+
+
 }

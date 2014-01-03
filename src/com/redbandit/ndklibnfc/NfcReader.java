@@ -4,12 +4,11 @@ import com.redbandit.nfcTypes.*;
 import android.widget.TextView;
 
 
+
 public class NfcReader  {
 	
 	public NfcContext m_context = new NfcContext();
 	
-	
-	public String log = new String();
 	String tag = "NfcReader:";
 	
 	static {
@@ -24,15 +23,8 @@ public class NfcReader  {
 		
 	}
 
-	public  void print_debug(String message ){
-		
-		log += "\n" + tag + message + "\n";
-		
-	
-	}
-	public void clearLog(){
-		log = "";
-	}
+
+
 	
 	
 	public native long jnfc_init();

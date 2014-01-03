@@ -12,7 +12,7 @@ import com.redbandit.utils.*;
 
 public class LibNfcActivity extends Activity {
 	
-	TextView logView ;
+	StringTextView logView ;
 	 Button   btnStart ;
 	 Button   btnTestUsb;
 	 NfcReader nfc_reader;
@@ -23,7 +23,7 @@ public class LibNfcActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lib_nfc);
-		logView = (TextView)findViewById(R.id.vwLog);
+		logView = (StringTextView)findViewById(R.id.vwLog);
 		btnStart = (Button) findViewById(R.id.btnStart);
 		btnTestUsb = (Button) findViewById(R.id.btnTestUsb);
 		logView.setTextSize(15);
@@ -32,7 +32,7 @@ public class LibNfcActivity extends Activity {
 		
 		nfc_reader = new NfcReader();
 		usbHelper = new UsbHelper();
-		nLogger = new JNILogger();
+		nLogger = new JNILogger(logView);
 		
 		//btnStart.setOnClickListener(l)
 		//this.setContentView(tv);
@@ -60,9 +60,9 @@ public class LibNfcActivity extends Activity {
 			out+= "LibNfcActivity: usb test returned 0\n";
 		}
 		
-		out += nLogger.log;
-		logView.setText(out);
-		usbHelper.clearLog();
+		//out += nLogger.log;
+		//logView.setText(out);
+		//nLogger.clearLog();
     }
     
     private void test_nfc(){
@@ -108,9 +108,9 @@ public class LibNfcActivity extends Activity {
 			
 			nfc_reader.jnfc_exit(ctx);
 		}
-		out += nLogger.log;
-		logView.setText(out);
-		nfc_reader.clearLog();
+		//out += nLogger.log;
+		//logView.setText(out);
+		//nLogger.clearLog();
     }
     
     private void diagnose ()
@@ -143,9 +143,9 @@ public class LibNfcActivity extends Activity {
 		}*/
         
 		nfc_reader.device_test();
-		out += nLogger.log;
-		logView.setText(out);
-		nLogger.clearLog();
+		//out += nLogger.log;
+		//logView.setText(out);
+		//nLogger.clearLog();
     	
     }
 }
